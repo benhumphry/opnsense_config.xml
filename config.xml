@@ -112,7 +112,7 @@
     <firmware version="1.0.1" persisted_at="1765319125.81">
       <mirror>https://www.mirrorservice.org/sites/opnsense.org</mirror>
       <flavour/>
-      <plugins>os-cpu-microcode-intel,os-ddclient,os-git-backup,os-nextcloud-backup,os-tailscale,os-theme-advanced</plugins>
+      <plugins>os-cpu-microcode-intel,os-ddclient,os-git-backup,os-nextcloud-backup,os-tailscale</plugins>
       <type/>
       <subscription/>
       <reboot>0</reboot>
@@ -1190,9 +1190,9 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
     <prefer>0.opnsense.pool.ntp.org</prefer>
   </ntpd>
   <revision>
-    <username>root@192.168.50.113</username>
-    <description>/api/core/dashboard/save_widgets made changes</description>
-    <time>1765379807.33</time>
+    <username>(system)</username>
+    <description>/usr/local/opnsense/scripts/firmware/register.php made changes</description>
+    <time>1765379950.47</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
