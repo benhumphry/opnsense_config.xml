@@ -139,7 +139,7 @@
         <password_encryption/>
         <backupdir>Backups/OPNsense</backupdir>
       </nextcloud>
-      <git version="1.0.0" persisted_at="1765336414.78" description="Git Backup Settings">
+      <git version="1.0.0" persisted_at="1765374719.50" description="Git Backup Settings">
         <enabled>1</enabled>
         <url>ssh://github.com/benhumphry/opnsense_config.xml.git</url>
         <branch>master</branch>
@@ -1191,8 +1191,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/core/dashboard/save_widgets made changes</description>
-    <time>1765373710.80</time>
+    <description>/diag_backup.php made changes</description>
+    <time>1765374719.50</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
