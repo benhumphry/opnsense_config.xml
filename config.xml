@@ -240,7 +240,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
     </opt2>
     <opt4>
       <if>igc1</if>
-      <descr>WAN_SPARE</descr>
+      <descr>WAN_5G</descr>
       <enable>1</enable>
       <lock>1</lock>
       <spoofmac/>
@@ -1191,8 +1191,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/routing/settings/set_gateway/a64f7721-493a-4c55-bf38-a38a171290a3 made changes</description>
-    <time>1765372678.99</time>
+    <description>/interfaces.php made changes</description>
+    <time>1765372980.27</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
