@@ -1,0 +1,3548 @@
+<?xml version="1.0"?>
+<opnsense>
+  <theme>opnsense</theme>
+  <sysctl version="1.0.1" persisted_at="1753363447.47">
+    <item uuid="83a50cdd-a716-4376-b6a2-4b195a10013c">
+      <tunable>hw.ibrs_disable</tunable>
+      <value/>
+      <descr>Disable Indirect Branch Restricted Speculation (Spectre V2 mitigation)</descr>
+    </item>
+    <item uuid="c3acec9c-caf9-447e-a41a-70ab4aa470b9">
+      <tunable>vm.pmap.pti</tunable>
+      <value/>
+      <descr>Page Table Isolation (Meltdown mitigation, requires reboot.)</descr>
+    </item>
+  </sysctl>
+  <system>
+    <optimization>normal</optimization>
+    <hostname>OPNsense</hostname>
+    <domain>localdomain</domain>
+    <dnsallowoverride>1</dnsallowoverride>
+    <group uuid="3952b7b9-4060-4717-ac7e-f4497bc7ca03">
+      <gid>1999</gid>
+      <name>admins</name>
+      <scope>system</scope>
+      <description>System Administrators</description>
+      <priv>page-all</priv>
+      <member>0</member>
+      <source_networks/>
+    </group>
+    <user uuid="6e6b5382-261d-4794-90b9-e956ee018e11">
+      <uid>0</uid>
+      <name>root</name>
+      <disabled>0</disabled>
+      <scope>system</scope>
+      <expires/>
+      <authorizedkeys/>
+      <otp_seed/>
+      <shell/>
+      <password>$2y$11$Ld5r615/JzbkdHp8Iqlt0eOiYNQsj/cgdFq4Z1mbeMhEcK6G5VYmK</password>
+      <pwd_changed_at/>
+      <landing_page/>
+      <comment/>
+      <email/>
+      <apikeys/>
+      <priv/>
+      <language/>
+      <descr>System Administrator</descr>
+      <dashboard>eyJvcHRpb25zIjpbXSwid2lkZ2V0cyI6W3siaWQiOiJzeXN0ZW1pbmZvcm1hdGlvbiIsIm1pblciOjIsIngiOjAsInkiOjAsImgiOjUxMiwid2lkZ2V0IjpbXSwidyI6Mn0seyJpZCI6Im1lbW9yeSIsIm1pblciOjEsIngiOjIsInkiOjAsImgiOjEyMCwid2lkZ2V0IjpbXSwidyI6bnVsbH0seyJpZCI6ImRpc2siLCJtaW5XIjoxLCJ4IjozLCJ5IjowLCJoIjoxMjAsIndpZGdldCI6W10sInciOm51bGx9LHsiaWQiOiJzZXJ2aWNlcyIsIm1pblciOjIsIngiOjQsInkiOjAsInciOjQsInNpemVUb0NvbnRlbnQiOjc2NCwiaCI6NzY0LCJ3aWRnZXQiOltdfSx7ImlkIjoiV2lyZWd1YXJkIiwibWluVyI6Miwic2l6ZVRvQ29udGVudCI6MzQwLCJ4Ijo4LCJ5IjowLCJoIjozNDAsIndpZGdldCI6W10sInciOjJ9LHsiaWQiOiJnYXRld2F5cyIsIm1pblciOjIsInNpemVUb0NvbnRlbnQiOjM0MiwieCI6MTAsInkiOjAsImgiOjM0Miwid2lkZ2V0Ijp7ImdhdGV3YXlzIjpbImU1NGI2M2FiLWU4NzYtNGYzMS05ZDVlLTUzOWNiYzBmNThkNiIsIjczNzhhYWZkLWIzZTgtNGFjNi1iNTEyLWUwMjVmMDM0Y2EwOCIsIldBTl9ESENQNiIsIldBTl9ESENQIl19LCJ3IjoyfSx7ImlkIjoiZGRjbGllbnQiLCJtaW5XIjoyLCJzaXplVG9Db250ZW50IjoxMjMsIngiOjIsInkiOjEyMCwiaCI6MTIzLCJ3aWRnZXQiOltdLCJ3IjoyfSx7ImlkIjoiYW5ub3VuY2VtZW50cyIsIm1pblciOjIsIngiOjIsInkiOjI0Mywic2l6ZVRvQ29udGVudCI6NjIxLCJoIjo2MjEsIndpZGdldCI6W10sInciOjJ9LHsiaWQiOiJUYWlsc2NhbGUiLCJtaW5XIjoyLCJzaXplVG9Db250ZW50Ijo0OTIsIngiOjgsInkiOjM0MCwiaCI6NDkyLCJ3aWRnZXQiOltdLCJ3IjoyfSx7ImlkIjoidHJhZmZpYyIsIm1pblciOjIsIngiOjEwLCJ5IjozNDIsImgiOjQ1Mywid2lkZ2V0Ijp7ImludGVyZmFjZXMiOlsibGFuIiwid2FuIl19LCJ3IjoyfSx7ImlkIjoiaW50ZXJmYWNlcyIsIm1pblciOjIsInNpemVUb0NvbnRlbnQiOjMxOCwieCI6MCwieSI6NTEyLCJoIjozMTgsIndpZGdldCI6W10sInciOjJ9XX0=</dashboard>
+    </user>
+    <user uuid="67388249-a0d3-426a-9070-8c2dcd43cefc">
+      <uid>2000</uid>
+      <name>homepage</name>
+      <disabled>0</disabled>
+      <scope>user</scope>
+      <expires/>
+      <authorizedkeys/>
+      <otp_seed/>
+      <shell/>
+      <password>$2y$11$s48WWG4a5D8bRoA4htN.Ku/phAawjVeDZ1qdQr28buFjrNPCVHEeG</password>
+      <pwd_changed_at/>
+      <landing_page/>
+      <comment/>
+      <email/>
+      <apikeys>VQ6X+Ib+WoKAWrRtNcHLrcAMu4Rpv9SdsI/8R+lLZtBWSNEVgN98MWDAocWIZljk+OF7Xw7Dtmt+kp6G|$6$$EQEAsQA.tGLg146h20Fs0ajDiGtuGTXzoIQmVn/n73NPGNtI9pnwLgnKIwO4zQ1izqfH4/6C4wv5A5j1kVZP3.</apikeys>
+      <priv>page-diagnostics-system-activity,page-status-trafficgraph</priv>
+      <language/>
+      <descr/>
+      <dashboard/>
+    </user>
+    <timezone>Etc/UTC</timezone>
+    <timeservers>0.opnsense.pool.ntp.org 1.opnsense.pool.ntp.org 2.opnsense.pool.ntp.org 3.opnsense.pool.ntp.org</timeservers>
+    <webgui>
+      <protocol>https</protocol>
+      <ssl-certref>6882340af21f6</ssl-certref>
+      <port/>
+      <ssl-ciphers/>
+      <interfaces/>
+      <compression/>
+      <althostnames>router.1809.io</althostnames>
+    </webgui>
+    <usevirtualterminal>1</usevirtualterminal>
+    <disableconsolemenu>1</disableconsolemenu>
+    <disablevlanhwfilter>1</disablevlanhwfilter>
+    <disablechecksumoffloading>1</disablechecksumoffloading>
+    <disablesegmentationoffloading>1</disablesegmentationoffloading>
+    <disablelargereceiveoffloading>1</disablelargereceiveoffloading>
+    <ipv6allow>1</ipv6allow>
+    <powerd_ac_mode>hadp</powerd_ac_mode>
+    <powerd_battery_mode>hadp</powerd_battery_mode>
+    <powerd_normal_mode>hadp</powerd_normal_mode>
+    <bogons>
+      <interval>monthly</interval>
+    </bogons>
+    <pf_share_forward>1</pf_share_forward>
+    <lb_use_sticky>1</lb_use_sticky>
+    <ssh>
+      <group>admins</group>
+      <noauto>1</noauto>
+      <interfaces>lan</interfaces>
+      <kex/>
+      <ciphers/>
+      <macs/>
+      <keys/>
+      <keysig/>
+      <rekeylimit/>
+      <enabled>enabled</enabled>
+      <passwordauth>1</passwordauth>
+      <permitrootlogin>1</permitrootlogin>
+    </ssh>
+    <rrdbackup>-1</rrdbackup>
+    <netflowbackup>-1</netflowbackup>
+    <firmware version="1.0.1" persisted_at="1765319125.81">
+      <mirror>https://www.mirrorservice.org/sites/opnsense.org</mirror>
+      <flavour/>
+      <plugins>os-cpu-microcode-intel,os-ddclient,os-git-backup,os-nextcloud-backup,os-tailscale,os-theme-advanced</plugins>
+      <type/>
+      <subscription/>
+      <reboot>0</reboot>
+    </firmware>
+    <serialspeed>115200</serialspeed>
+    <primaryconsole>video</primaryconsole>
+    <enablenatreflectionhelper>yes</enablenatreflectionhelper>
+    <maximumstates/>
+    <maximumfrags/>
+    <aliasesresolveinterval>300</aliasesresolveinterval>
+    <maximumtableentries/>
+    <pfdebug>urgent</pfdebug>
+    <remotebackup>
+      <GDriveBackupCount>60</GDriveBackupCount>
+      <GDriveEmail>115170501422477073702</GDriveEmail>
+      <GDriveFolderID>123l7YuO5eqcmYiah86EJP8hVNWXQYMNm</GDriveFolderID>
+    </remotebackup>
+    <backup>
+      <nextcloud version="1.0.0" persisted_at="1765332180.86" description="OPNsense Nextcloud Backup Settings">
+        <enabled>1</enabled>
+        <url>https://cloud.littleseed.uk</url>
+        <user>benhum</user>
+        <password>SLw9P-pEbew-QpXkY-G9i38-fZeyK</password>
+        <password_encryption/>
+        <backupdir>Backups/OPNsense</backupdir>
+      </nextcloud>
+      <git version="1.0.0" persisted_at="1765336414.78" description="Git Backup Settings">
+        <enabled>1</enabled>
+        <url>ssh://github.com/benhumphry/opnsense_config.xml.git</url>
+        <branch>master</branch>
+        <force_push>0</force_push>
+        <privkey>-----BEGIN OPENSSH PRIVATE KEY-----&#13;
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW&#13;
+QyNTUxOQAAACB295aoVDNofy/OzL8Px5XEub6YIE5rRA5z6rX1xStrCQAAAJi7nUZ2u51G&#13;
+dgAAAAtzc2gtZWQyNTUxOQAAACB295aoVDNofy/OzL8Px5XEub6YIE5rRA5z6rX1xStrCQ&#13;
+AAAEDP7/ftUfus4qsvf7LskVcM6phKamMclxTq1o3IIGRImXb3lqhUM2h/L87Mvw/HlcS5&#13;
+vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
+-----END OPENSSH PRIVATE KEY-----</privkey>
+        <user>git</user>
+        <password/>
+      </git>
+    </backup>
+    <backupcount>20</backupcount>
+    <language>en_US</language>
+    <dnsallowoverride_exclude/>
+    <dnsserver/>
+    <dns1gw>none</dns1gw>
+    <dns2gw>none</dns2gw>
+    <dns3gw>none</dns3gw>
+    <dns4gw>none</dns4gw>
+    <dns5gw>none</dns5gw>
+    <dns6gw>none</dns6gw>
+    <dns7gw>none</dns7gw>
+    <dns8gw>none</dns8gw>
+  </system>
+  <interfaces>
+    <wan>
+      <if>igc0</if>
+      <descr>WAN</descr>
+      <enable>1</enable>
+      <lock>1</lock>
+      <spoofmac>02:A1:44:8E:7C:0B</spoofmac>
+      <blockpriv>1</blockpriv>
+      <blockbogons>1</blockbogons>
+      <ipaddr>dhcp</ipaddr>
+      <dhcphostname/>
+      <alias-address/>
+      <alias-subnet>32</alias-subnet>
+      <dhcprejectfrom/>
+      <adv_dhcp_pt_timeout/>
+      <adv_dhcp_pt_retry/>
+      <adv_dhcp_pt_select_timeout/>
+      <adv_dhcp_pt_reboot/>
+      <adv_dhcp_pt_backoff_cutoff/>
+      <adv_dhcp_pt_initial_interval/>
+      <adv_dhcp_pt_values>SavedCfg</adv_dhcp_pt_values>
+      <adv_dhcp_send_options/>
+      <adv_dhcp_request_options/>
+      <adv_dhcp_required_options/>
+      <adv_dhcp_option_modifiers/>
+      <adv_dhcp_config_advanced/>
+      <adv_dhcp_config_file_override/>
+      <adv_dhcp_config_file_override_path/>
+    </wan>
+    <lan>
+      <if>ix0</if>
+      <descr>LAN</descr>
+      <enable>1</enable>
+      <lock>1</lock>
+      <spoofmac/>
+      <ipaddr>192.168.50.1</ipaddr>
+      <subnet>23</subnet>
+      <ipaddrv6>track6</ipaddrv6>
+      <track6-interface/>
+      <track6-prefix-id>0</track6-prefix-id>
+    </lan>
+    <lo0>
+      <internal_dynamic>1</internal_dynamic>
+      <descr>Loopback</descr>
+      <enable>1</enable>
+      <if>lo0</if>
+      <ipaddr>127.0.0.1</ipaddr>
+      <ipaddrv6>::1</ipaddrv6>
+      <subnet>8</subnet>
+      <subnetv6>128</subnetv6>
+      <type>none</type>
+      <virtual>1</virtual>
+    </lo0>
+    <opt1>
+      <if>wg1</if>
+      <descr>VPN_DE</descr>
+      <enable>1</enable>
+      <lock>1</lock>
+      <spoofmac/>
+      <gateway_interface>1</gateway_interface>
+    </opt1>
+    <opt2>
+      <if>vlan01</if>
+      <descr>IOT_UNTRUSTED</descr>
+      <enable>1</enable>
+      <lock>1</lock>
+      <spoofmac/>
+      <ipaddr>192.168.20.1</ipaddr>
+      <subnet>24</subnet>
+    </opt2>
+    <opt4>
+      <if>igc1</if>
+      <descr>WAN_SPARE</descr>
+      <enable>1</enable>
+      <lock>1</lock>
+      <spoofmac/>
+      <ipaddr>dhcp</ipaddr>
+      <dhcphostname/>
+      <alias-address/>
+      <alias-subnet>32</alias-subnet>
+      <dhcprejectfrom/>
+      <adv_dhcp_pt_timeout/>
+      <adv_dhcp_pt_retry/>
+      <adv_dhcp_pt_select_timeout/>
+      <adv_dhcp_pt_reboot/>
+      <adv_dhcp_pt_backoff_cutoff/>
+      <adv_dhcp_pt_initial_interval/>
+      <adv_dhcp_pt_values>SavedCfg</adv_dhcp_pt_values>
+      <adv_dhcp_send_options/>
+      <adv_dhcp_request_options/>
+      <adv_dhcp_required_options/>
+      <adv_dhcp_option_modifiers/>
+      <adv_dhcp_config_advanced/>
+      <adv_dhcp_config_file_override/>
+      <adv_dhcp_config_file_override_path/>
+    </opt4>
+    <wireguard>
+      <internal_dynamic>1</internal_dynamic>
+      <descr>WireGuard (Group)</descr>
+      <if>wireguard</if>
+      <virtual>1</virtual>
+      <enable>1</enable>
+      <type>group</type>
+      <networks/>
+    </wireguard>
+  </interfaces>
+  <dhcpd>
+    <lan>
+      <ddnsdomainalgorithm>hmac-md5</ddnsdomainalgorithm>
+      <numberoptions>
+        <item>
+          <number>6</number>
+          <type>string</type>
+          <value>c0:a8:32:fb:c0:a8:32:3b:c0:a8:32:58</value>
+        </item>
+      </numberoptions>
+      <range>
+        <from>192.168.51.1</from>
+        <to>192.168.51.254</to>
+      </range>
+      <winsserver/>
+      <dnsserver/>
+      <ntpserver/>
+      <staticmap>
+        <mac>02:8d:7e:65:cf:b3</mac>
+        <ipaddr>192.168.50.1</ipaddr>
+        <hostname>OPNsense</hostname>
+        <descr>OPNsense Router</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:83:3e:19</mac>
+        <ipaddr>192.168.50.21</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:83:45:2f</mac>
+        <ipaddr>192.168.50.22</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:93:fb:fb</mac>
+        <ipaddr>192.168.50.23</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:93:f3:85</mac>
+        <ipaddr>192.168.50.24</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:93:f4:f5</mac>
+        <ipaddr>192.168.50.25</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:93:e4:f7</mac>
+        <ipaddr>192.168.50.26</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:89:76:93:d8:68</mac>
+        <ipaddr>192.168.50.27</ipaddr>
+        <descr>Tuya Light</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:88:6b:16:3e:e1</mac>
+        <ipaddr>192.168.50.42</ipaddr>
+        <hostname>AWAIR-ELEM-163EE1</hostname>
+        <descr>Awair Air Monitor (Bedroom)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:88:6b:16:3d:f5</mac>
+        <ipaddr>192.168.50.43</ipaddr>
+        <hostname>AWAIR-ELEM-163DF5</hostname>
+        <descr>Awair Air Monitor (Nursery)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>70:88:6b:16:0a:81</mac>
+        <ipaddr>192.168.50.44</ipaddr>
+        <hostname>AWAIR-ELEM-160A81</hostname>
+        <descr>Awair Air Monitor (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>a0:c9:a0:0d:a7:5e</mac>
+        <ipaddr>192.168.50.51</ipaddr>
+        <hostname>AC-UTY-a0c9a00da75e</hostname>
+        <descr>LG AC (In&#xE8;s Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>a0:c9:a0:0d:41:34</mac>
+        <ipaddr>192.168.50.52</ipaddr>
+        <hostname>AC-UTY-a0c9a00d4134</hostname>
+        <descr>LG AC (Master Bedroom)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>a0:c9:a0:0d:f0:c2</mac>
+        <ipaddr>192.168.50.53</ipaddr>
+        <hostname>AC-UTY-a0c9a00df0c2</hostname>
+        <descr>LG AC (Nursery)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>a0:c9:a0:0d:12:f0</mac>
+        <ipaddr>192.168.50.54</ipaddr>
+        <hostname>AC-UTY-a0c9a00d12f0</hostname>
+        <descr>LG AC (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>d8:3a:dd:f7:8d:d7</mac>
+        <ipaddr>192.168.50.59</ipaddr>
+        <hostname>DNS2</hostname>
+        <descr>DNS 2</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>b8:be:f4:a8:a3:87</mac>
+        <ipaddr>192.168.50.62</ipaddr>
+        <hostname>Dining-Room</hostname>
+        <descr>Devolo Magic 2 LAN (Living Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>b8:be:f4:a8:ad:28</mac>
+        <ipaddr>192.168.50.63</ipaddr>
+        <hostname>Office</hostname>
+        <descr>Devolo Magic 2 LAN (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>b8:be:f4:c9:24:9d</mac>
+        <ipaddr>192.168.50.64</ipaddr>
+        <hostname>Utility</hostname>
+        <descr>Devolo Magic 2 LAN (Utility)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>b8:be:f4:a7:20:a1</mac>
+        <ipaddr>192.168.50.65</ipaddr>
+        <hostname>Bedroom</hostname>
+        <descr>Devolo Magic 2 LAN (Bedroom)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:13:fd:3e</mac>
+        <ipaddr>192.168.50.71</ipaddr>
+        <hostname>Unifi</hostname>
+        <descr>Unifi Network Controller</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>84:78:48:d6:89:08</mac>
+        <ipaddr>192.168.50.72</ipaddr>
+        <hostname>U7ProLivingRoom</hostname>
+        <descr>U7 Pro AP (Living Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>84:78:48:d6:8e:30</mac>
+        <ipaddr>192.168.50.73</ipaddr>
+        <hostname>U7ProOffice</hostname>
+        <descr>U7 Pro AP (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>1c:0b:8b:b4:88:d1</mac>
+        <ipaddr>192.168.50.74</ipaddr>
+        <hostname>U7LiteUtility</hostname>
+        <descr>U7 Lite AP (Utility Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>1c:0b:8b:b4:88:a1</mac>
+        <ipaddr>192.168.50.75</ipaddr>
+        <hostname>U7LiteBedroom</hostname>
+        <descr>U7 Lite AP (Bedroom)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:ec:a3:6c</mac>
+        <ipaddr>192.168.50.88</ipaddr>
+        <hostname>dns3</hostname>
+        <descr>DNS 3</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>94:9f:3e:c7:1a:21</mac>
+        <ipaddr>192.168.50.91</ipaddr>
+        <hostname>Sonos-Beam</hostname>
+        <descr>Sonos Beam (Bedroom)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>5c:aa:fd:2a:4c:08</mac>
+        <ipaddr>192.168.50.92</ipaddr>
+        <hostname>Sonos-Play1</hostname>
+        <descr>Sonos Play:1 (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>48:a6:b8:07:bf:a2</mac>
+        <ipaddr>192.168.50.93</ipaddr>
+        <hostname>Sonos-Arc</hostname>
+        <descr>Sonos Arc (Living Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>54:2a:1b:61:65:f2</mac>
+        <ipaddr>192.168.50.94</ipaddr>
+        <hostname>Sonos-Surround-Left</hostname>
+        <descr>Sonos Surround (Living Room - Left)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>54:2a:1b:61:63:f2</mac>
+        <ipaddr>192.168.50.95</ipaddr>
+        <hostname>Sonos-Surround-Right</hostname>
+        <descr>Sonos Surround (Living Room - Right)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>f0:f6:c1:00:ce:18</mac>
+        <ipaddr>192.168.50.96</ipaddr>
+        <hostname>Sonos-Sub</hostname>
+        <descr>Sonos Sub (Living Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>78:55:36:01:15:02</mac>
+        <ipaddr>192.168.50.101</ipaddr>
+        <hostname>pve3</hostname>
+        <descr>Proxmox Lab III</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:3d:e0:b2</mac>
+        <ipaddr>192.168.50.103</ipaddr>
+        <hostname>docker3</hostname>
+        <descr>Proxmox Docker III</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>50:65:f3:21:b4:b0</mac>
+        <ipaddr>192.168.50.111</ipaddr>
+        <hostname>Proxmox1</hostname>
+        <descr>Proxmox Lab I (Home Lab)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:73:2a:bb</mac>
+        <ipaddr>192.168.50.112</ipaddr>
+        <hostname>TrueNAS</hostname>
+        <descr>TrueNAS</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:be:6f:6f</mac>
+        <ipaddr>192.168.50.113</ipaddr>
+        <hostname>Docker</hostname>
+        <descr>Docker</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:aa:02:f2</mac>
+        <ipaddr>192.168.50.114</ipaddr>
+        <hostname>Anytype</hostname>
+        <descr>Anytype</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>bc:24:11:95:8b:f3</mac>
+        <ipaddr>192.168.50.117</ipaddr>
+        <hostname>Roon</hostname>
+        <descr>Roon</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>c8:ff:bf:05:4e:dd</mac>
+        <ipaddr>192.168.50.154</ipaddr>
+        <hostname>Proxmox2</hostname>
+        <descr>Proxmox Lab II (Network Stuff)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>fe:f0:4a:5e:2a:00</mac>
+        <ipaddr>192.168.50.197</ipaddr>
+        <hostname>plexbox</hostname>
+        <descr>Plexbox</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>00:18:dd:25:2f:59</mac>
+        <ipaddr>192.168.50.204</ipaddr>
+        <hostname>HDHR</hostname>
+        <descr>HDHR</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>e8:ff:1e:d2:46:92</mac>
+        <ipaddr>192.168.50.207</ipaddr>
+        <hostname>HomeAssistant</hostname>
+        <descr>Home Assistant</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>d8:3a:dd:f7:a3:59</mac>
+        <ipaddr>192.168.50.251</ipaddr>
+        <hostname>DNS1</hostname>
+        <descr>DNS 1</descr>
+        <winsserver/>
+        <dnsserver>8.8.8.8</dnsserver>
+        <dnsserver>8.8.4.4</dnsserver>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>1c:2a:a3:1e:c5:b1</mac>
+        <ipaddr>192.168.50.253</ipaddr>
+        <hostname>Switch2</hostname>
+        <descr>Switch (Office)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+      <staticmap>
+        <mac>1c:2a:a3:1e:9a:ad</mac>
+        <ipaddr>192.168.50.254</ipaddr>
+        <hostname>Switch1</hostname>
+        <descr>Switch (Dining Room)</descr>
+        <winsserver/>
+        <dnsserver/>
+        <ntpserver/>
+      </staticmap>
+    </lan>
+  </dhcpd>
+  <snmpd>
+    <syslocation/>
+    <syscontact/>
+    <rocommunity>public</rocommunity>
+  </snmpd>
+  <nat>
+    <outbound>
+      <mode>hybrid</mode>
+      <rule>
+        <source>
+          <network>any</network>
+        </source>
+        <destination>
+          <any>1</any>
+        </destination>
+        <descr/>
+        <category/>
+        <interface>opt1</interface>
+        <tag/>
+        <tagged/>
+        <poolopts/>
+        <poolopts_sourcehashkey/>
+        <ipprotocol>inet</ipprotocol>
+        <target/>
+        <targetip_subnet>0</targetip_subnet>
+        <sourceport/>
+        <updated>
+          <username>root@192.168.50.209</username>
+          <time>1752263342.4038</time>
+          <description>/firewall_nat_out_edit.php made changes</description>
+        </updated>
+        <created>
+          <username>root@192.168.50.209</username>
+          <time>1752263342.4038</time>
+          <description>/firewall_nat_out_edit.php made changes</description>
+        </created>
+      </rule>
+      <rule>
+        <source>
+          <network>any</network>
+        </source>
+        <destination>
+          <any>1</any>
+        </destination>
+        <descr/>
+        <category/>
+        <interface>opt2</interface>
+        <tag/>
+        <tagged/>
+        <poolopts/>
+        <poolopts_sourcehashkey/>
+        <ipprotocol>inet</ipprotocol>
+        <target/>
+        <targetip_subnet>0</targetip_subnet>
+        <sourceport/>
+        <updated>
+          <username>root@192.168.50.113</username>
+          <time>1752524969.0608</time>
+          <description>/firewall_nat_out_edit.php made changes</description>
+        </updated>
+        <created>
+          <username>root@192.168.50.113</username>
+          <time>1752524969.0608</time>
+          <description>/firewall_nat_out_edit.php made changes</description>
+        </created>
+      </rule>
+    </outbound>
+    <rule>
+      <protocol>udp</protocol>
+      <interface>wan</interface>
+      <category/>
+      <ipprotocol>inet</ipprotocol>
+      <descr>Tailscale</descr>
+      <tag/>
+      <tagged/>
+      <poolopts/>
+      <associated-rule-id>nat_68826c901d62c0.38021105</associated-rule-id>
+      <target>Docker</target>
+      <local-port>41666</local-port>
+      <source>
+        <any>1</any>
+      </source>
+      <destination>
+        <network>wanip</network>
+        <port>41666</port>
+      </destination>
+      <natreflection>purenat</natreflection>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1753377936.12</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.209</username>
+        <time>1752256928.3161</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule>
+      <protocol>tcp/udp</protocol>
+      <interface>wan</interface>
+      <category/>
+      <ipprotocol>inet</ipprotocol>
+      <descr>Syncthing 22000</descr>
+      <tag/>
+      <tagged/>
+      <poolopts/>
+      <associated-rule-id/>
+      <target>Docker</target>
+      <local-port>22000</local-port>
+      <source>
+        <any>1</any>
+      </source>
+      <destination>
+        <network>wanip</network>
+        <port>22000</port>
+      </destination>
+      <natreflection>purenat</natreflection>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1753377949.31</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.209</username>
+        <time>1752257009.2043</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule>
+      <protocol>udp</protocol>
+      <interface>wan</interface>
+      <category/>
+      <ipprotocol>inet</ipprotocol>
+      <descr>Syncthing 20127</descr>
+      <tag/>
+      <tagged/>
+      <poolopts/>
+      <associated-rule-id/>
+      <target>Docker</target>
+      <local-port>21027</local-port>
+      <source>
+        <any>1</any>
+      </source>
+      <destination>
+        <network>wanip</network>
+        <port>21027</port>
+      </destination>
+      <natreflection>purenat</natreflection>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1753377958.58</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.209</username>
+        <time>1752257065.9834</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule>
+      <protocol>tcp/udp</protocol>
+      <interface>wan</interface>
+      <category/>
+      <ipprotocol>inet</ipprotocol>
+      <descr>Roon</descr>
+      <tag/>
+      <tagged/>
+      <poolopts/>
+      <associated-rule-id/>
+      <target>Roon</target>
+      <local-port>55000</local-port>
+      <source>
+        <any>1</any>
+      </source>
+      <destination>
+        <network>wanip</network>
+        <port>55000</port>
+      </destination>
+      <natreflection>purenat</natreflection>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1753788565.10</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.209</username>
+        <time>1752257129.7566</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+  </nat>
+  <filter>
+    <rule uuid="6b895db2-bf43-453e-8467-780daa33e0a8">
+      <type>pass</type>
+      <associated-rule-id>nat_68826c901d62c0.38021105</associated-rule-id>
+      <source>
+        <any>1</any>
+      </source>
+      <interface>wan</interface>
+      <statetype>keep state</statetype>
+      <protocol>udp</protocol>
+      <ipprotocol>inet</ipprotocol>
+      <destination>
+        <address>Docker</address>
+        <port>41666</port>
+      </destination>
+      <descr>Tailscale</descr>
+      <category/>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1753377936.12</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="858ee0aa-382e-4dba-add7-6e3d7901d9b3">
+      <type>pass</type>
+      <associated-rule-id/>
+      <source>
+        <any>1</any>
+      </source>
+      <interface>wan</interface>
+      <statetype>keep state</statetype>
+      <protocol>tcp/udp</protocol>
+      <ipprotocol>inet</ipprotocol>
+      <destination>
+        <address>Roon</address>
+        <port>55000</port>
+      </destination>
+      <descr>Roon</descr>
+      <category/>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1753377967.71</time>
+        <description>/firewall_nat_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="31528175-aba8-498e-a46b-8b1593a6b980">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <gateway>VPN_DE_GW</gateway>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <any>1</any>
+      </source>
+      <destination>
+        <address>Unblock_DE</address>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1753379294.51</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1753379294.51</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="b90862fb-1b86-480a-b94f-9413baa2b52c">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow Home Assistant to control IoT devices</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <address>Home_Assistant</address>
+      </source>
+      <destination>
+        <network>opt2</network>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763727605.23</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763727552.42</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="5c93066c-2f43-4cd1-8978-798f24c339dc">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow LAN to LAN traffic (local routing)</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <network>lan</network>
+      </source>
+      <destination>
+        <address>RFC1918_Private_Networks</address>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763735146.15</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763735146.15</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="c884fcac-1cfc-41c6-b426-8ff88fdd0d8c">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Default allow LAN to any rule</descr>
+      <gateway>WAN_FAILOVER</gateway>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <network>lan</network>
+      </source>
+      <destination>
+        <any>1</any>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763726241.63</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+    </rule>
+    <rule uuid="495aa1b1-a565-4777-9d3c-dc027d0f9c4f">
+      <type>pass</type>
+      <ipprotocol>inet6</ipprotocol>
+      <descr>Default allow LAN IPv6 to any rule</descr>
+      <interface>lan</interface>
+      <source>
+        <network>lan</network>
+      </source>
+      <destination>
+        <any/>
+      </destination>
+    </rule>
+    <rule uuid="2f19659f-3368-4085-8562-7ff191a34314">
+      <type>pass</type>
+      <interface>opt2</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow DNS queries to local DNS servers</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <protocol>tcp/udp</protocol>
+      <source>
+        <network>opt2</network>
+      </source>
+      <destination>
+        <network>(self)</network>
+        <port>53</port>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763329665.77</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763329665.77</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="92400624-5a02-49ae-825d-5f4aaa1e7889">
+      <type>pass</type>
+      <interface>opt2</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow Home Assistant to control IoT devices</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <address>Home_Assistant</address>
+      </source>
+      <destination>
+        <network>opt2</network>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763330156.37</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763330156.37</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="a678902d-833d-4c8b-89d7-1f6b9d31c2ad">
+      <type>pass</type>
+      <interface>opt2</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow IoT devices to push data to Home Assistant</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <protocol>tcp/udp</protocol>
+      <source>
+        <network>opt2</network>
+      </source>
+      <destination>
+        <address>Home_Assistant</address>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763727106.36</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763330298.04</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="709cf414-20f4-4980-add3-898aff618bbb">
+      <type>block</type>
+      <interface>opt2</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Block IoT access to all private networks</descr>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <network>opt2</network>
+      </source>
+      <destination>
+        <address>RFC1918_Private_Networks</address>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763333493.80</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763333493.80</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+    <rule uuid="b350e2eb-51a2-4d43-87f9-c3df7693458c">
+      <type>pass</type>
+      <interface>opt2</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Allow IoT devices to access internet</descr>
+      <gateway>WAN_FAILOVER</gateway>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <network>opt2</network>
+      </source>
+      <destination>
+        <any>1</any>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763726272.93</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1763330477.75</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
+  </filter>
+  <rrd>
+    <enable/>
+  </rrd>
+  <ntpd>
+    <prefer>0.opnsense.pool.ntp.org</prefer>
+  </ntpd>
+  <revision>
+    <username>root@192.168.51.5</username>
+    <description>/diag_backup.php made changes</description>
+    <time>1765336414.78</time>
+  </revision>
+  <OPNsense>
+    <captiveportal version="1.0.4" persisted_at="1753363447.35">
+      <zones/>
+      <templates/>
+    </captiveportal>
+    <cron version="1.0.4" persisted_at="1753363447.47">
+      <jobs/>
+    </cron>
+    <DHCRelay version="1.0.1" persisted_at="1753363447.48"/>
+    <Firewall>
+      <Lvtemplate version="0.0.1" persisted_at="1753363447.48">
+        <templates/>
+      </Lvtemplate>
+      <Alias version="1.0.1" persisted_at="1763800447.65" description="Firewall aliases">
+        <geoip>
+          <url/>
+        </geoip>
+        <aliases>
+          <alias uuid="0df98bce-695d-4917-9e0d-e50338331977">
+            <enabled>1</enabled>
+            <name>Docker</name>
+            <type>host</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>192.168.50.113</content>
+            <password/>
+            <username/>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description/>
+          </alias>
+          <alias uuid="fd8f0da8-ef9e-454f-8ae9-16522eff28af">
+            <enabled>1</enabled>
+            <name>Roon</name>
+            <type>host</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>192.168.50.117</content>
+            <password/>
+            <username/>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description/>
+          </alias>
+          <alias uuid="68c4dc79-f556-4cfc-b194-35a1cf131c4d">
+            <enabled>1</enabled>
+            <name>Unblock_DE</name>
+            <type>host</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>1</counters>
+            <updatefreq/>
+            <content>archive.ph
+irc.torrentleech.org
+tleechreload.org
+torrentleech.org
+www.tleechreload.org
+www.torrentleech.org
+milkie.cc
+speedapp.io
+krazyzone.net
+www.pornhub.com
+pornhub.com
+www.youporn.com
+i.imgur.com
+imgur.com
+api.imgur.com
+m.imgur.com
+s.imgur.com
+t.imgur.com
+www.imgur.com
+www.whatsmyip.org</content>
+            <password>opnsense</password>
+            <username>root</username>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description/>
+          </alias>
+          <alias uuid="9fe264b3-6496-4ac5-879e-081c7fc580d5">
+            <enabled>1</enabled>
+            <name>Roon2</name>
+            <type>mac</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>bc:24:11:95:8b:f3</content>
+            <password>opnsense</password>
+            <username>root</username>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description/>
+          </alias>
+          <alias uuid="4107f43a-fa81-4d63-81d2-136b13ea1614">
+            <enabled>1</enabled>
+            <name>Docker3</name>
+            <type>host</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>192.168.50.103</content>
+            <password/>
+            <username/>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description/>
+          </alias>
+          <alias uuid="0a5a2bea-acc4-4fc4-bc6d-e3610870df9c">
+            <enabled>1</enabled>
+            <name>Home_Assistant</name>
+            <type>host</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>192.168.50.207</content>
+            <password/>
+            <username/>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description>Home Assistant</description>
+          </alias>
+          <alias uuid="3387f996-95e2-4769-94ca-2573298a4275">
+            <enabled>1</enabled>
+            <name>RFC1918_Private_Networks</name>
+            <type>network</type>
+            <path_expression/>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16</content>
+            <password/>
+            <username/>
+            <authtype/>
+            <expire/>
+            <categories/>
+            <description>All RFC1918 private address space</description>
+          </alias>
+        </aliases>
+      </Alias>
+      <Category version="1.0.0" persisted_at="1753363447.67">
+        <categories/>
+      </Category>
+      <Filter version="1.0.4" persisted_at="1753363447.78">
+        <rules/>
+        <snatrules/>
+        <npt/>
+        <onetoone/>
+      </Filter>
+    </Firewall>
+    <Netflow version="1.0.1" persisted_at="1753363447.48">
+      <capture>
+        <interfaces/>
+        <egress_only/>
+        <version>v9</version>
+        <targets/>
+      </capture>
+      <collect>
+        <enable>0</enable>
+      </collect>
+      <activeTimeout>1800</activeTimeout>
+      <inactiveTimeout>15</inactiveTimeout>
+    </Netflow>
+    <IDS version="1.1.1" persisted_at="1762897272.31" description="Intrusion detection">
+      <rules/>
+      <policies/>
+      <userDefinedRules/>
+      <files/>
+      <fileTags/>
+      <general>
+        <enabled>0</enabled>
+        <ips>0</ips>
+        <promisc>0</promisc>
+        <interfaces>wan</interfaces>
+        <homenet>192.168.0.0/16,10.0.0.0/8,172.16.0.0/12</homenet>
+        <defaultPacketSize/>
+        <UpdateCron/>
+        <AlertLogrotate>W0D23</AlertLogrotate>
+        <AlertSaveLogs>4</AlertSaveLogs>
+        <MPMAlgo/>
+        <detect>
+          <Profile/>
+          <toclient_groups/>
+          <toserver_groups/>
+        </detect>
+        <syslog>0</syslog>
+        <syslog_eve>0</syslog_eve>
+        <LogPayload>0</LogPayload>
+        <verbosity/>
+        <eveLog>
+          <http>
+            <enable>0</enable>
+            <extended>0</extended>
+            <dumpAllHeaders/>
+          </http>
+          <tls>
+            <enable>0</enable>
+            <extended>0</extended>
+            <sessionResumption>0</sessionResumption>
+            <custom/>
+          </tls>
+        </eveLog>
+      </general>
+    </IDS>
+    <IPsec version="1.0.5" persisted_at="1760370692.39">
+      <general>
+        <enabled/>
+        <preferred_oldsa>0</preferred_oldsa>
+        <disablevpnrules>0</disablevpnrules>
+        <passthrough_networks/>
+        <user_source/>
+        <local_group/>
+      </general>
+      <charon>
+        <max_ikev1_exchanges/>
+        <threads>16</threads>
+        <ikesa_table_size>32</ikesa_table_size>
+        <ikesa_table_segments>4</ikesa_table_segments>
+        <init_limit_half_open>1000</init_limit_half_open>
+        <ignore_acquire_ts>1</ignore_acquire_ts>
+        <install_routes>0</install_routes>
+        <cisco_unity>0</cisco_unity>
+        <make_before_break>0</make_before_break>
+        <retransmit_tries/>
+        <retransmit_timeout/>
+        <retransmit_base/>
+        <retransmit_jitter/>
+        <retransmit_limit/>
+        <syslog>
+          <daemon>
+            <ike_name>1</ike_name>
+            <log_level>0</log_level>
+            <app>1</app>
+            <asn>1</asn>
+            <cfg>1</cfg>
+            <chd>1</chd>
+            <dmn>1</dmn>
+            <enc>1</enc>
+            <esp>1</esp>
+            <ike>1</ike>
+            <imc>1</imc>
+            <imv>1</imv>
+            <job>1</job>
+            <knl>1</knl>
+            <lib>1</lib>
+            <mgr>1</mgr>
+            <net>1</net>
+            <pts>1</pts>
+            <tls>1</tls>
+            <tnc>1</tnc>
+          </daemon>
+        </syslog>
+        <plugins>
+          <attr>
+            <subnet/>
+            <split-include/>
+            <x_28674/>
+            <x_28675/>
+            <x_28672/>
+            <x_28673>0</x_28673>
+            <x_28679/>
+            <dns/>
+            <nbns/>
+          </attr>
+          <eap-radius>
+            <servers/>
+            <accounting>0</accounting>
+            <class_group>0</class_group>
+          </eap-radius>
+          <xauth-pam>
+            <pam_service>ipsec</pam_service>
+            <session>0</session>
+            <trim_email>1</trim_email>
+          </xauth-pam>
+        </plugins>
+      </charon>
+      <keyPairs/>
+      <preSharedKeys/>
+    </IPsec>
+    <Swanctl version="1.0.0" persisted_at="1753363447.93">
+      <Connections/>
+      <locals/>
+      <remotes/>
+      <children/>
+      <Pools/>
+      <VTIs/>
+      <SPDs/>
+    </Swanctl>
+    <Interfaces>
+      <loopbacks version="1.0.0" persisted_at="1753363447.98"/>
+      <neighbors version="1.0.0" persisted_at="1753363447.98"/>
+      <vxlans version="1.0.2" persisted_at="1753363448.02"/>
+    </Interfaces>
+    <Kea>
+      <ctrl_agent version="0.0.1" persisted_at="1753363448.03">
+        <general>
+          <enabled>0</enabled>
+          <http_host>127.0.0.1</http_host>
+          <http_port>8000</http_port>
+        </general>
+      </ctrl_agent>
+      <dhcp4 version="1.0.4" persisted_at="1764885492.83" description="Kea DHCPv4 configuration">
+        <general>
+          <enabled>1</enabled>
+          <manual_config>0</manual_config>
+          <interfaces>opt2,lan</interfaces>
+          <valid_lifetime>4000</valid_lifetime>
+          <fwrules>1</fwrules>
+          <dhcp_socket_type>raw</dhcp_socket_type>
+        </general>
+        <lexpire>
+          <hold_reclaimed_time/>
+          <reclaim_timer_wait_time/>
+          <flush_reclaimed_timer_wait_time/>
+          <max_reclaim_time/>
+          <max_reclaim_leases/>
+          <unwarned_reclaim_cycles/>
+        </lexpire>
+        <ha>
+          <enabled>0</enabled>
+          <this_server_name/>
+          <max_unacked_clients>2</max_unacked_clients>
+        </ha>
+        <subnets>
+          <subnet4 uuid="cbc6e3d5-543d-4412-83fa-6a3779f26449">
+            <subnet>192.168.50.0/23</subnet>
+            <next_server/>
+            <option_data_autocollect>0</option_data_autocollect>
+            <option_data>
+              <domain_name_servers>192.168.50.11,192.168.50.12,192.168.50.13</domain_name_servers>
+              <domain_search>localdomain</domain_search>
+              <routers>192.168.50.1</routers>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name>localdomain</domain_name>
+              <ntp_servers>192.168.50.1</ntp_servers>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+              <v6_only_preferred/>
+            </option_data>
+            <match-client-id>1</match-client-id>
+            <pools>192.168.51.1 - 192.168.51.254
+</pools>
+            <description>LAN</description>
+          </subnet4>
+          <subnet4 uuid="1cff21a9-d464-485e-9c7b-70d7853d4c4a">
+            <subnet>192.168.20.1/24</subnet>
+            <next_server/>
+            <option_data_autocollect>0</option_data_autocollect>
+            <option_data>
+              <domain_name_servers>192.168.20.1</domain_name_servers>
+              <domain_search/>
+              <routers>192.168.20.1</routers>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name>iot.home.arpa</domain_name>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+              <v6_only_preferred/>
+            </option_data>
+            <match-client-id>1</match-client-id>
+            <pools>192.168.20.100 - 192.168.20.200</pools>
+            <description>IOT_UNTRUSTED</description>
+          </subnet4>
+        </subnets>
+        <reservations>
+          <reservation uuid="2c4bc5dc-a3cf-4e1b-bd56-1e90f9369d32">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.1</ip_address>
+            <hw_address>02:8d:7e:65:cf:b3</hw_address>
+            <hostname>OPNsense</hostname>
+            <description>OPNsense Router [VM / Proxmox 2]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="b5e8e003-5331-474c-bc2b-c5e509a5136f">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.21</ip_address>
+            <hw_address>70:89:76:83:3e:19</hw_address>
+            <hostname>Tuya_Bulb-1</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="fa7f0691-0e15-4c8f-bc5d-b497e802fa88">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.22</ip_address>
+            <hw_address>70:89:76:83:45:2f</hw_address>
+            <hostname>Tuya_Bulb-2</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="6c768101-fc02-42af-ad40-70590392f5d7">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.23</ip_address>
+            <hw_address>70:89:76:93:fb:fb</hw_address>
+            <hostname>Tuya_Bulb-3</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="ee6871b1-b4e3-4b7e-83bd-aa274ba74879">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.24</ip_address>
+            <hw_address>70:89:76:93:f3:85</hw_address>
+            <hostname>Tuya_Bulb-4</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="30144075-a726-4e78-afe3-b52cf2c8da08">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.25</ip_address>
+            <hw_address>70:89:76:93:f4:f5</hw_address>
+            <hostname>Tuya_Bulb-5</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="238d4b25-f7b6-4b9c-ab12-49f9b5ade1c1">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.26</ip_address>
+            <hw_address>70:89:76:93:e4:f7</hw_address>
+            <hostname>Tuya_Bulb-6</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="c8ed0223-4fdc-43b9-a75f-f46137c527ff">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.27</ip_address>
+            <hw_address>70:89:76:93:d8:68</hw_address>
+            <hostname>Tuya_Bulb-7</hostname>
+            <description>Tuya Light (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="d6f19c6b-c4a5-40fa-a707-ec9590ed31e8">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.52</ip_address>
+            <hw_address>70:88:6b:16:3e:e1</hw_address>
+            <hostname>Awair-2</hostname>
+            <description>Awair Air Quality Monitor (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="ca6b13d2-b43c-4a68-bdd8-49e3ad259509">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.53</ip_address>
+            <hw_address>70:88:6b:16:3d:f5</hw_address>
+            <hostname>Awair-3</hostname>
+            <description>Awair Air Quality Monitor (Nursery)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="c9d3c057-cd7e-4ce2-8283-122e41d2df6c">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.51</ip_address>
+            <hw_address>a0:c9:a0:0d:a7:5e</hw_address>
+            <hostname>FLG_AC-1</hostname>
+            <description>Fujitsu AC (In&#xE8;s Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="576311f4-48bf-4dd5-88b2-9838d7d890aa">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.52</ip_address>
+            <hw_address>a0:c9:a0:0d:41:34</hw_address>
+            <hostname>FLG_AC-2</hostname>
+            <description>Fujitsu AC (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="8f3e5f08-1d7f-4ea0-95b9-d93820dfb8d9">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.53</ip_address>
+            <hw_address>a0:c9:a0:0d:f0:c2</hw_address>
+            <hostname>FLG_AC-3</hostname>
+            <description>Fujitsu AC (Nursery)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="598e06b2-7096-408e-a208-9d1f543b760f">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.54</ip_address>
+            <hw_address>a0:c9:a0:0d:12:f0</hw_address>
+            <hostname>FLG_AC-4</hostname>
+            <description>Fujitsu AC (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="df9053cd-8118-4f4e-8d8e-a05ba668aa20">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.11</ip_address>
+            <hw_address>d8:3a:dd:f7:8d:d7</hw_address>
+            <hostname>DNS-1</hostname>
+            <description>AdGuard DNS [Container / Proxmox 1]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="c9684e0f-0b53-47dc-bcb0-07bad0936da8">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.62</ip_address>
+            <hw_address>b8:be:f4:a8:a3:87</hw_address>
+            <hostname>Devolo-1</hostname>
+            <description>Devolo Magic 2 LAN (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="f6f9a625-79a5-47bb-bfbf-f29996a582b1">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.63</ip_address>
+            <hw_address>b8:be:f4:a8:ad:28</hw_address>
+            <hostname>Devolo-2</hostname>
+            <description>Devolo Magic 2 LAN (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="89cfcc81-ec53-48cf-9651-8ec073d1b6cb">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.64</ip_address>
+            <hw_address>b8:be:f4:c9:24:9d</hw_address>
+            <hostname>Devolo-3</hostname>
+            <description>Devolo Magic 2 LAN (Utility)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="b8a606b5-0ab6-497d-b2f0-9adcbae5873b">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.65</ip_address>
+            <hw_address>b8:be:f4:a7:20:a1</hw_address>
+            <hostname>Devolo-4</hostname>
+            <description>Devolo Magic 2 LAN (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="c9c4c8b3-978c-4201-b243-0570e808fa4e">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.71</ip_address>
+            <hw_address>bc:24:11:13:fd:3e</hw_address>
+            <hostname>Unifi_Controller</hostname>
+            <description>Unifi Network Controller [Container / Proxmox 2]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="df4456a4-a98c-4c50-a305-c4a1a594de56">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.72</ip_address>
+            <hw_address>84:78:48:d6:89:08</hw_address>
+            <hostname>U7_Pro-1</hostname>
+            <description>U7 Pro AP (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="34c89e5c-0253-4218-8262-f624b4d94a09">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.73</ip_address>
+            <hw_address>84:78:48:d6:8e:30</hw_address>
+            <hostname>U7_Pro-2</hostname>
+            <description>U7 Pro AP (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="95e1a808-388b-4fac-b922-c87e8096a9ae">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.74</ip_address>
+            <hw_address>1c:0b:8b:b4:88:d1</hw_address>
+            <hostname>U7_Lite-1</hostname>
+            <description>U7 Lite AP (Utility Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="db7c4219-5661-4220-8a60-f2bace0aafe1">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.75</ip_address>
+            <hw_address>1c:0b:8b:b4:88:a1</hw_address>
+            <hostname>U7_Lite-2</hostname>
+            <description>U7 Lite AP (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="ebc3ac88-704e-49a6-8d6e-8e62caf775bf">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.13</ip_address>
+            <hw_address>bc:24:11:ec:a3:6c</hw_address>
+            <hostname>DNS-3</hostname>
+            <description>AdGuard DNS [Container / Proxmox 3]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="aff79862-a3d5-4dcb-95a5-a0aecdddde9c">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.91</ip_address>
+            <hw_address>94:9f:3e:c7:1a:21</hw_address>
+            <hostname>Sonos_Beam</hostname>
+            <description>Sonos Beam (Bedroom)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="2cadab79-838f-4ba7-97e4-a82e97bf11db">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.92</ip_address>
+            <hw_address>5c:aa:fd:2a:4c:08</hw_address>
+            <hostname>Sonos_Play1</hostname>
+            <description>Sonos Play:1 (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="a3a69790-5db1-4321-b9bc-9b60c0e787ff">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.93</ip_address>
+            <hw_address>48:a6:b8:07:bf:a2</hw_address>
+            <hostname>Sonos_Arc</hostname>
+            <description>Sonos Arc (Living Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="30c1e06f-a710-4c17-86bd-be34d4a71445">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.94</ip_address>
+            <hw_address>54:2a:1b:61:65:f2</hw_address>
+            <hostname>Sonos_Surround-1</hostname>
+            <description>Sonos Surround (Living Room - Left)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="0b925a66-15b9-461c-9daa-ea7064c7b770">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.95</ip_address>
+            <hw_address>54:2a:1b:61:63:f2</hw_address>
+            <hostname>Sonos_Surround-2</hostname>
+            <description>Sonos Surround (Living Room - Right)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="657d66df-dd2e-412e-8a56-cc4cb47069ef">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.96</ip_address>
+            <hw_address>f0:f6:c1:00:ce:18</hw_address>
+            <hostname>Sonos_Sub</hostname>
+            <description>Sonos Sub (Living Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="a711c8b8-4b2b-419a-8e7b-233c10c113ee">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.101</ip_address>
+            <hw_address>78:55:36:01:15:02</hw_address>
+            <hostname>Proxmox-3</hostname>
+            <description>Proxmox Server 3 - SSD-based Homelab (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="f72f689a-e157-4fd2-9e33-e5b10a51718d">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.103</ip_address>
+            <hw_address>bc:24:11:3d:e0:b2</hw_address>
+            <hostname>Docker-3</hostname>
+            <description>Docker 3 [Container / Proxmox 3]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="2a77c283-cdee-44a0-994c-0d5ba97d7957">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.111</ip_address>
+            <hw_address>50:65:f3:21:b4:b0</hw_address>
+            <hostname>Proxmox-1</hostname>
+            <description>Proxmox Server  1- Homelab Core Apps and NAS (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="082144a7-fcbc-413c-9474-bd7fd2b00368">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.112</ip_address>
+            <hw_address>bc:24:11:73:2a:bb</hw_address>
+            <hostname>TrueNAS</hostname>
+            <description>TrueNAS [VM / Proxmox 1]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="279ac27e-4ada-41e3-b673-a3e1082f71e1">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.113</ip_address>
+            <hw_address>bc:24:11:be:6f:6f</hw_address>
+            <hostname>Docker-1</hostname>
+            <description>Docker [Container / Proxmox 1]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="10eaaa1f-a2d8-4489-a797-84f215ed746d">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.117</ip_address>
+            <hw_address>bc:24:11:95:8b:f3</hw_address>
+            <hostname>Roon</hostname>
+            <description>Roon - Music Server [Container / Proxmox 1]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="7f71edf0-60ad-4828-bca1-c5ec1781cd3c">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.151</ip_address>
+            <hw_address>c8:ff:bf:05:4e:dd</hw_address>
+            <hostname>Proxmox-2</hostname>
+            <description>Proxmox Server 2 - Homelab Core Network (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="34595062-3a05-4657-b2fc-504ca3519f96">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.204</ip_address>
+            <hw_address>00:18:dd:25:2f:59</hw_address>
+            <hostname>HDHR</hostname>
+            <description>HD Homerun - DVR (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="d0d12ed6-5274-44d8-b343-3454626052f4">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.207</ip_address>
+            <hw_address>e8:ff:1e:d2:46:92</hw_address>
+            <hostname>Home_Assistant</hostname>
+            <description>Home Assistant [Bare Metal] (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="f27e51b1-9fcb-4b08-a9f8-3c0ffd956e63">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.12</ip_address>
+            <hw_address>d8:3a:dd:f7:a3:59</hw_address>
+            <hostname>DNS-2</hostname>
+            <description>AdGuard DNS [Container / Proxmox 2]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="e0366119-032a-4a8f-97b5-01096bfab526">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.253</ip_address>
+            <hw_address>1c:2a:a3:1e:c5:b1</hw_address>
+            <hostname>Switch-2</hostname>
+            <description>Managed Switch (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="2ba3c440-2536-4a08-a5f6-21a7ef9378ea">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.254</ip_address>
+            <hw_address>1c:2a:a3:1e:9a:ad</hw_address>
+            <hostname>Switch-1</hostname>
+            <description>Managed Switch (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="76937180-7e42-46a4-80a2-78b1f0bcf78c">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.81</ip_address>
+            <hw_address>00:22:6c:33:dc:f1</hw_address>
+            <hostname>WIIM_Ultra</hostname>
+            <description>WIIM Ultra Streamer (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="5039c9c8-07cb-474e-8c26-0bfc5bd114e7">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.82</ip_address>
+            <hw_address>00:22:6c:02:1c:78</hw_address>
+            <hostname>AudioPro_C5A</hostname>
+            <description>AudioPro Streamer (Kitchen)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="aa6850f7-ea5f-4390-9812-0424833e7350">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.83</ip_address>
+            <hw_address>48:b0:2d:31:ba:00</hw_address>
+            <hostname>Nvidia_Shield</hostname>
+            <description>Nvidia Shield TV (Living Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="44cc2a55-ce50-4d04-b32c-4569c9d2b125">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.181</ip_address>
+            <hw_address>30:52:53:0e:b9:aa</hw_address>
+            <hostname>KVM-1</hostname>
+            <description>KVM [Home Assistant Server] (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="0445f87a-489a-40ff-bf8b-ff11b02aa895">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.182</ip_address>
+            <hw_address>30:52:53:0b:5a:84</hw_address>
+            <hostname>KVM-2</hostname>
+            <description>KVM [Windows PC] (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="9722f61a-5883-4fae-ba02-8ab719488cbc">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.115</ip_address>
+            <hw_address>BC:24:11:1E:57:9A</hw_address>
+            <hostname>Nextcloud</hostname>
+            <description>Nextcloud [Container / Proxmox 1]</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="6d1d5163-16bd-4f82-b1a8-e4c078421914">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.11</ip_address>
+            <hw_address>c8:c9:a3:87:c7:9c</hw_address>
+            <hostname>Growatt</hostname>
+            <description>Growatt Solar Storage (Loft)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="833350cc-b8d9-4065-82fe-29b8c97cedbc">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.12</ip_address>
+            <hw_address>3c:61:05:ec:6c:c4</hw_address>
+            <hostname>Tuya_Socket-1</hostname>
+            <description>Tuya Sockets (Garden)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="9b3da414-b69c-476b-9dce-185520e058eb">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.31</ip_address>
+            <hw_address>68:4e:05:df:41:db</hw_address>
+            <hostname>Smart_Panel-1</hostname>
+            <description>Smart Panel (Ines's Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="9ef0554c-0302-4b68-9207-f0b2929678cd">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.32</ip_address>
+            <hw_address>68:4e:05:df:43:78</hw_address>
+            <hostname>Smart_Panel-2</hostname>
+            <description>Smart Panel (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="249e7cad-24b1-4873-86f7-8e478ead15f5">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.41</ip_address>
+            <hw_address>84:cc:a8:0a:8f:8c</hw_address>
+            <hostname>Bloc_Blinds_Bridge</hostname>
+            <description>Bridge for Bloc Blinds (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="2a9c9f7b-afbd-4bb1-8fb2-189ad4c2560c">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.42</ip_address>
+            <hw_address>94:b5:55:93:bb:34</hw_address>
+            <hostname>Somfy_Blinds_Bridge</hostname>
+            <description>Bridge for Somfy Blinds (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="d4f2284d-8fb5-429e-a289-ab32297d29b0">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.13</ip_address>
+            <hw_address>c8:f0:9e:f0:f9:e4</hw_address>
+            <hostname>Everything_P1-1</hostname>
+            <description>Everything Presence One Sensor (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="a515ba37-600b-424d-9655-4f2b523e5885">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.14</ip_address>
+            <hw_address>c0:49:ef:6e:d0:cc</hw_address>
+            <hostname>Everything_P1-2</hostname>
+            <description>Everything Presence One Sensor (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="97c24b50-38b0-4d2a-9846-118d4b624675">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.51</ip_address>
+            <hw_address>70:88:6b:16:0a:81</hw_address>
+            <hostname>Awair-1</hostname>
+            <description>Awair Air Quality Monitor (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="d0558049-1e94-47e5-8148-cf20cfdcc311">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.54</ip_address>
+            <hw_address>70:88:6b:16:06:17</hw_address>
+            <hostname>Awair-4</hostname>
+            <description>Awair Air Quality Monitor (Ines's Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="9cc57649-5cbf-4484-ab26-ee559fdfd901">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.43</ip_address>
+            <hw_address>c4:29:96:b4:e1:24</hw_address>
+            <hostname>Philips_Hue_Bridge</hostname>
+            <description>Philips Hue Bridge Pro (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="231f83a9-f634-4f60-8218-3169dd2e4858">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.15</ip_address>
+            <hw_address>44:17:93:52:50:f8</hw_address>
+            <hostname>Glow_IHD-1</hostname>
+            <description>Hildebrand Glow - Power Meter &amp; MQTT Client (Living Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="f6a81241-3213-4a1a-a138-a4c8d97578fb">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.61</ip_address>
+            <hw_address>b0:02:47:d9:e5:a9</hw_address>
+            <hostname>CuboAI</hostname>
+            <description>CuboAI Baby Monitor (Nursery)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="19b8e209-dd50-4f8a-a83b-b517ac9928c1">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.121</ip_address>
+            <hw_address>58:47:ca:78:4e:8c</hw_address>
+            <hostname>Sunshine</hostname>
+            <description>Sunshine Gaming Server [Bare Metal] (Office)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="b956bd06-a23c-4da6-8129-d132369f5a71">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.59</ip_address>
+            <hw_address>BC:24:11:E5:8D:9F</hw_address>
+            <hostname>Legacy-DNS-2</hostname>
+            <description>AdGuard DNS [Container / Proxmox 1] ALT</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="0f8639df-13bc-4ba1-9921-d5b808cfb9c7">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.251</ip_address>
+            <hw_address>BC:24:11:D8:97:74</hw_address>
+            <hostname>Legacy-DNS-1</hostname>
+            <description>AdGuard DNS [Container / Proxmox 2] ALT</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="441319d3-421f-491f-80b5-5d87ded6b041">
+            <subnet>cbc6e3d5-543d-4412-83fa-6a3779f26449</subnet>
+            <ip_address>192.168.50.88</ip_address>
+            <hw_address>BC:24:11:59:06:91</hw_address>
+            <hostname>Legacy-DNS-3</hostname>
+            <description>AdGuard DNS [Container / Proxmox 3] ALT</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="65671783-203a-4ad9-9c9d-a307af34f1cf">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.70</ip_address>
+            <hw_address>8c:4b:14:97:87:44</hw_address>
+            <hostname>Twinkly_Lights</hostname>
+            <description>Christmas Tree Lights (Dining Room)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="26f63e9f-d72b-46a2-a108-0792eef0f70c">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.71</ip_address>
+            <hw_address>60:74:f4:4d:b0:e5</hw_address>
+            <hostname>Govee_Lights-1</hostname>
+            <description>Govee Lights (Back Garden)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+          <reservation uuid="40d200ee-5c8e-4a20-ace0-d3bf4efc5415">
+            <subnet>1cff21a9-d464-485e-9c7b-70d7853d4c4a</subnet>
+            <ip_address>192.168.20.72</ip_address>
+            <hw_address>d0:c9:07:ad:00:90</hw_address>
+            <hostname>Govee_Lights-2</hostname>
+            <description>Govee Lights (Front Garden)</description>
+            <option_data>
+              <domain_name_servers/>
+              <domain_search/>
+              <routers/>
+              <static_routes/>
+              <classless_static_route/>
+              <domain_name/>
+              <ntp_servers/>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+          </reservation>
+        </reservations>
+        <ha_peers/>
+      </dhcp4>
+      <dhcp6 version="1.0.0" persisted_at="1753363448.03">
+        <general>
+          <enabled>0</enabled>
+          <manual_config>0</manual_config>
+          <interfaces/>
+          <valid_lifetime>4000</valid_lifetime>
+          <fwrules>1</fwrules>
+        </general>
+        <ha>
+          <enabled>0</enabled>
+          <this_server_name/>
+          <max_unacked_clients>2</max_unacked_clients>
+        </ha>
+        <subnets/>
+        <reservations/>
+        <pd_pools/>
+        <ha_peers/>
+      </dhcp6>
+    </Kea>
+    <monit version="1.0.14" persisted_at="1760370692.57">
+      <general>
+        <enabled>0</enabled>
+        <interval>120</interval>
+        <startdelay>120</startdelay>
+        <mailserver>127.0.0.1</mailserver>
+        <port>25</port>
+        <username/>
+        <password/>
+        <ssl>0</ssl>
+        <sslversion>auto</sslversion>
+        <sslverify>1</sslverify>
+        <logfile/>
+        <statefile/>
+        <eventqueuePath/>
+        <eventqueueSlots/>
+        <httpdEnabled>0</httpdEnabled>
+        <httpdUsername>root</httpdUsername>
+        <httpdPassword/>
+        <httpdPort>2812</httpdPort>
+        <httpdAllow/>
+        <mmonitUrl/>
+        <mmonitTimeout>5</mmonitTimeout>
+        <mmonitRegisterCredentials>1</mmonitRegisterCredentials>
+      </general>
+      <alert uuid="a508f140-5254-46e8-9708-7ca568f7f69f">
+        <enabled>0</enabled>
+        <recipient>root@localhost.local</recipient>
+        <noton>0</noton>
+        <events/>
+        <format/>
+        <reminder/>
+        <description/>
+      </alert>
+      <service uuid="84e26a04-85a0-42d6-9855-1094cf70c66e">
+        <enabled>1</enabled>
+        <name>$HOST</name>
+        <description/>
+        <type>system</type>
+        <pidfile/>
+        <match/>
+        <path/>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>8967a5e3-74c7-4729-9350-3e35dc4dbb7a,776a35be-0d01-47ec-95b3-3363f70d5209,c9a2b30e-865a-4bd1-9b5d-4fffba346900,cd228835-f173-4d9b-8b19-bfa62098f674</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="ce0e05c8-47c2-427e-892d-9436865e7e24">
+        <enabled>1</enabled>
+        <name>RootFs</name>
+        <description/>
+        <type>filesystem</type>
+        <pidfile/>
+        <match/>
+        <path>/</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>7bfe6623-215a-4afb-af78-c8786453d856</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="1add4ef2-e38b-4079-8f61-23a386f69518">
+        <enabled>0</enabled>
+        <name>carp_status_change</name>
+        <description/>
+        <type>custom</type>
+        <pidfile/>
+        <match/>
+        <path>/usr/local/opnsense/scripts/monit/carp_status.php</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>c4ce11a4-d655-443d-9bb6-0e601ef1b5a5</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="2e41bc73-c7bc-4848-a8fc-26d3d307c08c">
+        <enabled>0</enabled>
+        <name>gateway_alert</name>
+        <description/>
+        <type>custom</type>
+        <pidfile/>
+        <match/>
+        <path>/usr/local/opnsense/scripts/monit/gateway_alert.php</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>d5f2010e-0bf6-4ad2-9f2e-6906828d508d</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <test uuid="f080dbd4-992e-4c08-9a74-63258082e00f">
+        <name>Ping</name>
+        <type>NetworkPing</type>
+        <condition>failed ping</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="616b8837-29dd-4abc-992c-842bb77ea6ef">
+        <name>NetworkLink</name>
+        <type>NetworkInterface</type>
+        <condition>failed link</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="13db8d84-0f1b-43ed-91b7-86185ee0fa04">
+        <name>NetworkSaturation</name>
+        <type>NetworkInterface</type>
+        <condition>saturation is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="8967a5e3-74c7-4729-9350-3e35dc4dbb7a">
+        <name>MemoryUsage</name>
+        <type>SystemResource</type>
+        <condition>memory usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="776a35be-0d01-47ec-95b3-3363f70d5209">
+        <name>CPUUsage</name>
+        <type>SystemResource</type>
+        <condition>cpu usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="c9a2b30e-865a-4bd1-9b5d-4fffba346900">
+        <name>LoadAvg1</name>
+        <type>SystemResource</type>
+        <condition>loadavg (1min) is greater than 8</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="cd228835-f173-4d9b-8b19-bfa62098f674">
+        <name>LoadAvg5</name>
+        <type>SystemResource</type>
+        <condition>loadavg (5min) is greater than 6</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="3b156645-8475-49d0-a2d1-2a98f130fb0a">
+        <name>LoadAvg15</name>
+        <type>SystemResource</type>
+        <condition>loadavg (15min) is greater than 4</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="7bfe6623-215a-4afb-af78-c8786453d856">
+        <name>SpaceUsage</name>
+        <type>SpaceUsage</type>
+        <condition>space usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="c4ce11a4-d655-443d-9bb6-0e601ef1b5a5">
+        <name>ChangedStatus</name>
+        <type>ProgramStatus</type>
+        <condition>changed status</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="d5f2010e-0bf6-4ad2-9f2e-6906828d508d">
+        <name>NonZeroStatus</name>
+        <type>ProgramStatus</type>
+        <condition>status != 0</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+    </monit>
+    <OpenVPNExport version="0.0.1" persisted_at="1753363448.05">
+      <servers/>
+    </OpenVPNExport>
+    <OpenVPN version="1.0.1" persisted_at="1753363448.05">
+      <Overwrites/>
+      <Instances/>
+      <StaticKeys/>
+    </OpenVPN>
+    <Gateways version="1.0.0" persisted_at="1765331844.52" description="Gateways configuration">
+      <gateway_item uuid="7378aafd-b3e8-4ac6-b512-e025f034ca08">
+        <disabled>0</disabled>
+        <name>VPN_DE_GW</name>
+        <descr>Interface VPN_DE_GW Gateway</descr>
+        <interface>opt1</interface>
+        <ipprotocol>inet</ipprotocol>
+        <gateway/>
+        <defaultgw>0</defaultgw>
+        <fargw>1</fargw>
+        <monitor_disable>0</monitor_disable>
+        <monitor_noroute>0</monitor_noroute>
+        <monitor_killstates>0</monitor_killstates>
+        <monitor_killstates_priority>0</monitor_killstates_priority>
+        <monitor>1.1.1.1</monitor>
+        <force_down>0</force_down>
+        <priority>254</priority>
+        <weight>1</weight>
+        <latencylow/>
+        <latencyhigh/>
+        <losslow/>
+        <losshigh/>
+        <interval/>
+        <time_period/>
+        <loss_interval/>
+        <data_length/>
+      </gateway_item>
+      <gateway_item uuid="96d036bc-1c20-4a27-9165-0e19429d45ef">
+        <disabled>0</disabled>
+        <name>WAN_DHCP</name>
+        <descr>Interface WAN_DHCP Gateway</descr>
+        <interface>wan</interface>
+        <ipprotocol>inet</ipprotocol>
+        <gateway/>
+        <defaultgw>1</defaultgw>
+        <fargw>0</fargw>
+        <monitor_disable>0</monitor_disable>
+        <monitor_noroute>0</monitor_noroute>
+        <monitor_killstates>1</monitor_killstates>
+        <monitor_killstates_priority>0</monitor_killstates_priority>
+        <monitor/>
+        <force_down>0</force_down>
+        <priority>254</priority>
+        <weight>1</weight>
+        <latencylow/>
+        <latencyhigh/>
+        <losslow/>
+        <losshigh/>
+        <interval/>
+        <time_period/>
+        <loss_interval/>
+        <data_length/>
+      </gateway_item>
+      <gateway_item uuid="a64f7721-493a-4c55-bf38-a38a171290a3">
+        <disabled>0</disabled>
+        <name>WAN_SPARE_GW</name>
+        <descr>Interface WAN_SPARE_GW Gateway</descr>
+        <interface>opt4</interface>
+        <ipprotocol>inet</ipprotocol>
+        <gateway/>
+        <defaultgw>0</defaultgw>
+        <fargw>0</fargw>
+        <monitor_disable>1</monitor_disable>
+        <monitor_noroute>0</monitor_noroute>
+        <monitor_killstates>0</monitor_killstates>
+        <monitor_killstates_priority>0</monitor_killstates_priority>
+        <monitor/>
+        <force_down>0</force_down>
+        <priority>254</priority>
+        <weight>1</weight>
+        <latencylow/>
+        <latencyhigh/>
+        <losslow/>
+        <losshigh/>
+        <interval/>
+        <time_period/>
+        <loss_interval/>
+        <data_length/>
+      </gateway_item>
+    </Gateways>
+    <Syslog version="1.0.2" persisted_at="1753363448.09">
+      <general>
+        <enabled>1</enabled>
+        <loglocal>1</loglocal>
+        <maxpreserve>31</maxpreserve>
+        <maxfilesize/>
+      </general>
+      <destinations/>
+    </Syslog>
+    <TrafficShaper version="1.0.3" persisted_at="1753363448.10">
+      <pipes/>
+      <queues/>
+      <rules/>
+    </TrafficShaper>
+    <trust>
+      <general version="1.0.1" persisted_at="1753363448.30">
+        <store_intermediate_certs>0</store_intermediate_certs>
+        <install_crls>0</install_crls>
+        <fetch_crls>0</fetch_crls>
+        <enable_legacy_sect>1</enable_legacy_sect>
+        <enable_config_constraints>0</enable_config_constraints>
+        <CipherString/>
+        <Ciphersuites/>
+        <SignatureAlgorithms/>
+        <groups/>
+        <MinProtocol/>
+        <MinProtocol_DTLS/>
+      </general>
+    </trust>
+    <unboundplus version="1.0.13" persisted_at="1764513817.99" description="Unbound configuration">
+      <general>
+        <enabled>1</enabled>
+        <port>53</port>
+        <stats>0</stats>
+        <active_interface>opt2,lan</active_interface>
+        <dnssec>1</dnssec>
+        <dns64>0</dns64>
+        <dns64prefix/>
+        <noarecords>0</noarecords>
+        <regdhcp>1</regdhcp>
+        <regdhcpdomain/>
+        <regdhcpstatic>1</regdhcpstatic>
+        <noreglladdr6>0</noreglladdr6>
+        <noregrecords>0</noregrecords>
+        <txtsupport>0</txtsupport>
+        <cacheflush>0</cacheflush>
+        <safesearch>0</safesearch>
+        <local_zone_type>transparent</local_zone_type>
+        <outgoing_interface/>
+        <enable_wpad>0</enable_wpad>
+      </general>
+      <advanced>
+        <hideidentity>0</hideidentity>
+        <hideversion>0</hideversion>
+        <prefetch>1</prefetch>
+        <prefetchkey>1</prefetchkey>
+        <dnssecstripped>0</dnssecstripped>
+        <aggressivensec>1</aggressivensec>
+        <serveexpired>0</serveexpired>
+        <serveexpiredreplyttl/>
+        <serveexpiredttl/>
+        <serveexpiredttlreset>0</serveexpiredttlreset>
+        <serveexpiredclienttimeout/>
+        <qnameminstrict>0</qnameminstrict>
+        <extendedstatistics>0</extendedstatistics>
+        <logqueries>0</logqueries>
+        <logreplies>0</logreplies>
+        <logtagqueryreply>0</logtagqueryreply>
+        <logservfail>0</logservfail>
+        <loglocalactions>0</loglocalactions>
+        <logverbosity>1</logverbosity>
+        <valloglevel>0</valloglevel>
+        <privatedomain/>
+        <privateaddress>0.0.0.0/8,10.0.0.0/8,100.64.0.0/10,169.254.0.0/16,172.16.0.0/12,192.0.2.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,233.252.0.0/24,::1/128,2001:db8::/32,fc00::/8,fd00::/8,fe80::/10</privateaddress>
+        <insecuredomain/>
+        <msgcachesize>100m</msgcachesize>
+        <rrsetcachesize>100m</rrsetcachesize>
+        <outgoingnumtcp/>
+        <incomingnumtcp/>
+        <numqueriesperthread/>
+        <outgoingrange/>
+        <jostletimeout/>
+        <discardtimeout/>
+        <cachemaxttl/>
+        <cachemaxnegativettl/>
+        <cacheminttl/>
+        <infrahostttl/>
+        <infrakeepprobing>0</infrakeepprobing>
+        <infracachenumhosts/>
+        <unwantedreplythreshold/>
+      </advanced>
+      <acls>
+        <default_action>allow</default_action>
+      </acls>
+      <dnsbl/>
+      <forwarding>
+        <enabled>0</enabled>
+      </forwarding>
+      <dots/>
+      <hosts/>
+      <aliases/>
+    </unboundplus>
+    <wireguard>
+      <client version="1.0.0" persisted_at="1765320138.43" description="WireGuard peer configuration">
+        <clients>
+          <client uuid="f452c1ca-74b1-488f-90bb-36680cbf893a">
+            <enabled>1</enabled>
+            <name>VPN_Server</name>
+            <pubkey>kaxYQDjP6PMccGSyTrG/TrONrRDiI9vpRDuvK4XX1x0=</pubkey>
+            <psk/>
+            <tunneladdress>0.0.0.0/0</tunneladdress>
+            <serveraddress>91.99.114.155</serveraddress>
+            <serverport>51821</serverport>
+            <keepalive>60</keepalive>
+          </client>
+        </clients>
+      </client>
+      <general version="0.0.1" persisted_at="1765320190.78" description="WireGuard configuration">
+        <enabled>1</enabled>
+      </general>
+      <server version="1.0.1" persisted_at="1763544650.88" description="WireGuard instance configuration">
+        <servers>
+          <server uuid="a3d20995-e910-432f-9695-5dc88376134c">
+            <enabled>1</enabled>
+            <name>VPN_Server</name>
+            <instance>1</instance>
+            <pubkey>DPZgRxWLU4N/HazGt3f+vb9yvMR7oq94/T5dIG7gJBw=</pubkey>
+            <privkey>EIDhH0nwAfqCLrMST62TMvyNaQvTxw/eu0jwB2rmuW4=</privkey>
+            <port>51821</port>
+            <mtu/>
+            <dns/>
+            <tunneladdress>10.3.0.2/32</tunneladdress>
+            <disableroutes>1</disableroutes>
+            <gateway>10.3.0.1</gateway>
+            <carp_depend_on/>
+            <peers>f452c1ca-74b1-488f-90bb-36680cbf893a</peers>
+            <debug>0</debug>
+            <endpoint/>
+            <peer_dns/>
+          </server>
+        </servers>
+      </server>
+    </wireguard>
+    <DynDNS version="1.5.1" persisted_at="1753739584.56">
+      <general>
+        <enabled>1</enabled>
+        <verbose>0</verbose>
+        <allowipv6>0</allowipv6>
+        <daemon_delay>600</daemon_delay>
+        <backend>ddclient</backend>
+      </general>
+      <accounts>
+        <account uuid="bf062549-8f38-4e4b-ae74-9878571345c1">
+          <enabled>1</enabled>
+          <service>cloudflare</service>
+          <protocol/>
+          <server/>
+          <username>token</username>
+          <password>Mt6XPmWpy1WwMqq95E3LtN_fcON9seYrgqdeUmv1</password>
+          <resourceId/>
+          <hostnames>home.bigseed.uk</hostnames>
+          <wildcard>0</wildcard>
+          <zone>bigseed.uk</zone>
+          <checkip>if</checkip>
+          <dynipv6host/>
+          <checkip_timeout>10</checkip_timeout>
+          <force_ssl>1</force_ssl>
+          <ttl>300</ttl>
+          <interface>wan</interface>
+          <description>home.bigseed.uk</description>
+        </account>
+      </accounts>
+    </DynDNS>
+    <tailscale>
+      <settings version="1.0.0" persisted_at="1765319980.15" description="Tailscale general settings">
+        <enabled>1</enabled>
+        <loginTimeout>10</loginTimeout>
+        <listenPort>41641</listenPort>
+        <acceptDNS>1</acceptDNS>
+        <advertiseExitNode>1</advertiseExitNode>
+        <useExitNode/>
+        <acceptSubnetRoutes>0</acceptSubnetRoutes>
+        <enableSSH>1</enableSSH>
+        <disableSNAT>0</disableSNAT>
+        <subnets>
+          <subnet4 uuid="89949990-ab10-4bcf-bd4c-bb91ee1ed5f3">
+            <subnet>192.168.50.0/23</subnet>
+            <description>LAN</description>
+          </subnet4>
+        </subnets>
+      </settings>
+      <authentication version="0.0.0" persisted_at="1765319887.50" description="Tailscale authentication settings">
+        <loginServer>https://headscale.littleseed.uk</loginServer>
+        <preAuthKey>1c5ad48aed217a73ae15b267d804b50fca761816fff04329</preAuthKey>
+      </authentication>
+    </tailscale>
+  </OPNsense>
+  <hasync version="1.0.2" persisted_at="1753363447.41">
+    <disablepreempt>0</disablepreempt>
+    <disconnectppps>0</disconnectppps>
+    <pfsyncinterface/>
+    <pfsyncpeerip/>
+    <pfsyncversion>1400</pfsyncversion>
+    <synchronizetoip/>
+    <verifypeer>0</verifypeer>
+    <username/>
+    <password/>
+    <syncitems/>
+  </hasync>
+  <dnsmasq version="1.0.8" persisted_at="1757347598.64">
+    <enable>0</enable>
+    <regdhcp>1</regdhcp>
+    <regdhcpstatic>0</regdhcpstatic>
+    <dhcpfirst>0</dhcpfirst>
+    <strict_order>0</strict_order>
+    <domain_needed>0</domain_needed>
+    <no_private_reverse>0</no_private_reverse>
+    <no_resolv>0</no_resolv>
+    <log_queries>0</log_queries>
+    <no_hosts>0</no_hosts>
+    <strictbind>0</strictbind>
+    <dnssec>0</dnssec>
+    <regdhcpdomain/>
+    <interface/>
+    <port/>
+    <dns_forward_max/>
+    <cache_size/>
+    <local_ttl/>
+    <add_mac/>
+    <add_subnet>0</add_subnet>
+    <strip_subnet>0</strip_subnet>
+    <dhcp>
+      <no_interface/>
+      <fqdn>1</fqdn>
+      <domain>internal</domain>
+      <local>1</local>
+      <lease_max/>
+      <authoritative>0</authoritative>
+      <default_fw_rules>1</default_fw_rules>
+      <reply_delay/>
+      <enable_ra>0</enable_ra>
+      <nosync>0</nosync>
+    </dhcp>
+    <no_ident>1</no_ident>
+    <dhcp_ranges uuid="5b73d7e0-a0b5-4528-87fd-7dd057f59e75">
+      <interface>lan</interface>
+      <set_tag/>
+      <start_addr>192.168.50.2</start_addr>
+      <end_addr>192.168.50.252</end_addr>
+      <subnet_mask/>
+      <constructor/>
+      <mode/>
+      <prefix_len/>
+      <lease_time/>
+      <domain_type>range</domain_type>
+      <domain/>
+      <nosync>0</nosync>
+      <ra_mode/>
+      <ra_priority/>
+      <ra_mtu/>
+      <ra_interval/>
+      <ra_router_lifetime/>
+      <description/>
+    </dhcp_ranges>
+    <dhcp_options uuid="19658827-2cdb-4b3b-a948-e87d619f2012">
+      <type>set</type>
+      <option>6</option>
+      <option6/>
+      <interface/>
+      <tag/>
+      <set_tag/>
+      <value>1.1.1.1</value>
+      <force>0</force>
+      <description/>
+    </dhcp_options>
+  </dnsmasq>
+  <ifgroups version="1.0.0" persisted_at="1753363447.78"/>
+  <bridges version="1.0.0" persisted_at="1753363447.94">
+    <bridged/>
+  </bridges>
+  <gifs version="1.0.0" persisted_at="1753439246.56">
+    <gif/>
+  </gifs>
+  <gres version="1.0.0" persisted_at="1753363447.94">
+    <gre/>
+  </gres>
+  <laggs version="1.0.0" persisted_at="1753363447.98">
+    <lagg/>
+  </laggs>
+  <virtualip version="1.0.1" persisted_at="1753363447.98">
+    <vip/>
+  </virtualip>
+  <vlans version="1.0.0" persisted_at="1765317003.80">
+    <vlan uuid="1a33e2e5-3363-44ed-a5c5-6692d4752b2e">
+      <if>ix0</if>
+      <tag>20</tag>
+      <pcp>0</pcp>
+      <proto/>
+      <descr>IoT VLAN</descr>
+      <vlanif>vlan01</vlanif>
+    </vlan>
+  </vlans>
+  <openvpn/>
+  <staticroutes version="1.0.0" persisted_at="1753363448.05">
+    <route/>
+  </staticroutes>
+  <ppps>
+    <ppp/>
+  </ppps>
+  <wireless>
+    <clone/>
+  </wireless>
+  <ca/>
+  <dhcpdv6>
+    <lan>
+      <ddnsdomainalgorithm>hmac-md5</ddnsdomainalgorithm>
+      <range>
+        <from>2001:470:1f1d:168::ffff:0</from>
+        <to>2001:470:1f1d:168:ffff:ffff:ffff:ffff</to>
+      </range>
+      <prefixrange>
+        <from/>
+        <to/>
+        <prefixlength>48</prefixlength>
+      </prefixrange>
+      <dnsserver/>
+      <ntpserver/>
+      <numberoptions>
+        <item/>
+      </numberoptions>
+      <ramode>disabled</ramode>
+      <rapriority>medium</rapriority>
+      <ramininterval>200</ramininterval>
+      <ramaxinterval>600</ramaxinterval>
+      <radomainsearchlist/>
+      <radnsserver/>
+    </lan>
+  </dhcpdv6>
+  <cert uuid="29b61278-5045-4970-a3c6-11df7c913211">
+    <refid>6882340af21f6</refid>
+    <descr>Web GUI TLS certificate</descr>
+    <caref/>
+    <crt>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUhIakNDQlFhZ0F3SUJBZ0lVU3ByeTBYRTNjQUt2U0pnNFlScC9oMFU3Z2hZd0RRWUpLb1pJaHZjTkFRRUwKQlFBd2dZa3hIVEFiQmdOVkJBTU1GRTlRVG5ObGJuTmxMbXh2WTJGc1pHOXRZV2x1TVFzd0NRWURWUVFHRXdKTwpUREVWTUJNR0ExVUVDQXdNV25WcFpDMUliMnhzWVc1a01SVXdFd1lEVlFRSERBeE5hV1JrWld4b1lYSnVhWE14CkxUQXJCZ05WQkFvTUpFOVFUbk5sYm5ObElITmxiR1l0YzJsbmJtVmtJSGRsWWlCalpYSjBhV1pwWTJGMFpUQWUKRncweU5UQTNNalF4TXpJME1qaGFGdzB5TmpBNE1qVXhNekkwTWpoYU1JR0pNUjB3R3dZRFZRUUREQlJQVUU1egpaVzV6WlM1c2IyTmhiR1J2YldGcGJqRUxNQWtHQTFVRUJoTUNUa3d4RlRBVEJnTlZCQWdNREZwMWFXUXRTRzlzCmJHRnVaREVWTUJNR0ExVUVCd3dNVFdsa1pHVnNhR0Z5Ym1sek1TMHdLd1lEVlFRS0RDUlBVRTV6Wlc1elpTQnoKWld4bUxYTnBaMjVsWkNCM1pXSWdZMlZ5ZEdsbWFXTmhkR1V3Z2dJaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQwpEd0F3Z2dJS0FvSUNBUUN3OXY4OE9XczNwTVgxN2lzeTJyTEZ5K085Rm9ZVE01TzQ0eW84QjRYaEtpVWRmTjdhCjhGNjBIeXlRTXRrSWtyWHJFRTQ3T1ZjUVlNdFUwQTI2NTlYQU9OVW0vOWZidEZkbFRXSERRVjhtSjR1cHh6cDkKN2lFWmRwZVFWL3VmL3pZdkVCbGxhYWVmMXpZYTF6VmlBczM1RzhlMTFFM2lZWm0vTGovSWpNYVpIRkhWK0xRUApRMi9MeVpLZVorY09YYmlWN1grdGwzTTBZbGVzVmZDZlFuT0U2NDBFb3k0a0w0Smx4UUJQVnZnT29SMHhNeFh2CmE5MHYwdVIwTElKOHR2UFk5QVIzRHJyemJsVmVubDNZbVVISDNIVGVxTmpvR2FIVWtzTzlRMkF3NzRSbDJJdVgKL0hLOXdxbERndGRKNGZmT0hyZ1dvRUE2c2x3S1NxcEtpM1NkcGphSWVxTStXblRXOTJEdmtMU29jRkNpdldwTgpieVhiay8rUXo4a2ZrUFR3SDQwcSs3dVZJMGlKWFFiaDN0VGpPME00QUVFVFlUUmdTRVZCcEJ0UktIbFhUQnhlClBVTWhiWmdnSnIyLy9STDJkSXczZjkrbldvRllMRFdQZC9vK3I0eEdxR1dqMS9MQ2JaN0Z5RlF3alFSa0NYOFgKcURBOUdXK3E2emFwWW1tR3pNd0hxZHl4SjdCdEMvUGtzVjZsSUUvQzUxanFVVVFNTmxCV09ublF2MW1zTkt0bgpMdm5LS2xNV2VSZ3dUWXRNaE95eDMvSHhpVTlCQ1NhWVRORGNUUTZMRkJKdFU2ZUhLckdlL3hkOVdzMERTWVorCmcyVFpvNGJZUlFPNFZRZGx3dEdVVTNSamRZSmp0RFpoRm9SM3FIRFJ5QXBXU1ZZaDdnZ1V4VDhUK1FJREFRQUIKbzRJQmVqQ0NBWFl3Q1FZRFZSMFRCQUl3QURBUkJnbGdoa2dCaHZoQ0FRRUVCQU1DQmtBd05BWUpZSVpJQVliNApRZ0VOQkNjV0pVOVFUbk5sYm5ObElFZGxibVZ5WVhSbFpDQlRaWEoyWlhJZ1EyVnlkR2xtYVdOaGRHVXdIUVlEClZSME9CQllFRkp1aWhkMllwdFV4NVlwVWlrSjNlVGVmNE40dE1JR3pCZ05WSFNNRWdhc3dnYWloZ1kra2dZd3cKZ1lreEhUQWJCZ05WQkFNTUZFOVFUbk5sYm5ObExteHZZMkZzWkc5dFlXbHVNUXN3Q1FZRFZRUUdFd0pPVERFVgpNQk1HQTFVRUNBd01XblZwWkMxSWIyeHNZVzVrTVJVd0V3WURWUVFIREF4TmFXUmtaV3hvWVhKdWFYTXhMVEFyCkJnTlZCQW9NSkU5UVRuTmxibk5sSUhObGJHWXRjMmxuYm1Wa0lIZGxZaUJqWlhKMGFXWnBZMkYwWllJVVNwcnkKMFhFM2NBS3ZTSmc0WVJwL2gwVTdnaFl3SFFZRFZSMGxCQll3RkFZSUt3WUJCUVVIQXdFR0NDc0dBUVVGQ0FJQwpNQXNHQTFVZER3UUVBd0lGb0RBZkJnTlZIUkVFR0RBV2doUlBVRTV6Wlc1elpTNXNiMk5oYkdSdmJXRnBiakFOCkJna3Foa2lHOXcwQkFRc0ZBQU9DQWdFQVhRKzVhWlFrOU1ONWN0eG1oKzUzREZpYmxURXlmNUcySE5qaVFCTncKNlBuNndYYWNUbzhtVVBGalJMNUFpQnFVamprMTFvbHpCRzh3ZytiVDlNYUpVQklHZjBpYUpJdnF0Ri9IZHpHWgpUbG05VGFpeXpTZzZ3bHpFcTYrSWR0bWlzaG9ROTVwYktpWWUrdWU4RGdnL3psUWNLMU9teGtOVWtyb2pOaURxCldidEM2SkxmYlhEVSs5dElLWHE1Q1JCUzBJYnJGa2dmOUxUcndNNCtpVW03dHdZZk5pVUJ5SUN3ZFdvZUZ0cEgKd0x4eC9LSGtXazZET2FFcmExOUMxMW9WUHF3cXJIK09zWDl6QnJXWkxTZkVoLzVHMXhnOForcUdQODBoaUZSRQpZL1hRSVVac2YxZTVzbDJmQ3NENGczYUpyL3NHUTdNeGlna0owakIyYnc0ZlRuOU1rd0tyRXN6bUFDbUpWMVZmClh3aTZxVXVIT0pRQktPNGhIYUx6Rk51VGFkUG44SUM2c21mWHoyR3ZVZzRBY25UZGswRHRMYmJyQlFlYmw2MFMKazBQRXRpV0hRRkl1blRJUG05ZnNEeHUzT2s0WGF5cmxiOFBCZDFGRmZGczZkVEs0S0JKalRlQnpNdzV6M2VuaApDaS9aL1F0QnEvV0VmbUlOK1N1REJ6eWY3OFJqVTV6a0dTWWlnS2pFWVZZZ2tVajN3YW5tN2JVS3RWTExnVE9nCjVFSmpUL2o5b0czbm9PWlJQcW5jNnRMMTRPbVowcnFJaWRPblZPVjVCS01zS05jdEVmbExZSWN5S0tFVktTd3UKL1owNis3aFJYbWRKWW1QNXNUbHNnUWpZK0I4c3lYejZWQm5TWFFFZXp4RFZOYVVYejBrTmJJWFFsempFYTZGTQp5VTA9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K</crt>
+    <csr/>
+    <prv>LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUpRZ0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQ1N3d2dna29BZ0VBQW9JQ0FRQ3c5djg4T1dzM3BNWDEKN2lzeTJyTEZ5K085Rm9ZVE01TzQ0eW84QjRYaEtpVWRmTjdhOEY2MEh5eVFNdGtJa3JYckVFNDdPVmNRWU10VQowQTI2NTlYQU9OVW0vOWZidEZkbFRXSERRVjhtSjR1cHh6cDk3aUVaZHBlUVYvdWYvell2RUJsbGFhZWYxellhCjF6VmlBczM1RzhlMTFFM2lZWm0vTGovSWpNYVpIRkhWK0xRUFEyL0x5WktlWitjT1hiaVY3WCt0bDNNMFlsZXMKVmZDZlFuT0U2NDBFb3k0a0w0Smx4UUJQVnZnT29SMHhNeFh2YTkwdjB1UjBMSUo4dHZQWTlBUjNEcnJ6YmxWZQpubDNZbVVISDNIVGVxTmpvR2FIVWtzTzlRMkF3NzRSbDJJdVgvSEs5d3FsRGd0ZEo0ZmZPSHJnV29FQTZzbHdLClNxcEtpM1NkcGphSWVxTStXblRXOTJEdmtMU29jRkNpdldwTmJ5WGJrLytRejhrZmtQVHdINDBxKzd1VkkwaUoKWFFiaDN0VGpPME00QUVFVFlUUmdTRVZCcEJ0UktIbFhUQnhlUFVNaGJaZ2dKcjIvL1JMMmRJdzNmOStuV29GWQpMRFdQZC9vK3I0eEdxR1dqMS9MQ2JaN0Z5RlF3alFSa0NYOFhxREE5R1crcTZ6YXBZbW1Hek13SHFkeXhKN0J0CkMvUGtzVjZsSUUvQzUxanFVVVFNTmxCV09ublF2MW1zTkt0bkx2bktLbE1XZVJnd1RZdE1oT3l4My9IeGlVOUIKQ1NhWVRORGNUUTZMRkJKdFU2ZUhLckdlL3hkOVdzMERTWVorZzJUWm80YllSUU80VlFkbHd0R1VVM1JqZFlKagp0RFpoRm9SM3FIRFJ5QXBXU1ZZaDdnZ1V4VDhUK1FJREFRQUJBb0lDQUFnOWZYQmt6V2Vma09ibnVvazVWOGtRCkQ4QmhTUjJoeHR6U3hISmJ6Znh6R3ZGVVBETCtXRnFUZDdRVjVMZEZKWnJCZlVob0NNbDhIYkVLL2I0RFI1ZkEKemJsdGdRbFE5M1RYSCszdDlhdndKczBNRFltSm4yN3hHbWoxUDlsRHZWWi9BeFVPMEwyeVVXbWtpeGw2UDBtOApqOEJ1d2dXcTU4bUMzTTRqaC8wMGdyY0U4cXJNbldzTzJDTkUwVThybkFuQjJsMGtuVHBiamZEa3U0OUprb1FtClRSVzNNaWNyTXl1TCt5ZGhTYXhjdDRydjhiTTBBWmtBSi9VazVzVS9PNmJtNDBKV3BFRkE2bEZuN0dvYjVpS1QKL2JrcDF1MGxMR2VhbHo5bWkyeHhRQktzcDZ0aHdrZGJHM05IcDJ0Z1RmVlhjWU9waUo3SWFWMXRVVXFtcUdlNQpwRTRzbE5EbHpSRlUxS1IvcFRmaDM0WmxocFQ5NCtTU3N4c0prS0YwM1ZvRnVGNjFTUVlIa0tuV3d6SkFyVllkCndOOXdmNG5heVljSVpXTE16VGNPSHVYZ0FabloxdEEvdGFDUkVPZ2w2N2hJcUxzSFErZ2xET2FJK2dmcUNPTzMKL3BGcDM3MVk2MEhLTHRTRi9RY0dEdldkbU43YTlaTzg0QmhkTXF0Z0NVZ25FMWNCbTRBc3VuMk0wNjVQbzFRNQpSRzdJVW1rSmgxVFY2dVJmZVhUTk11Mm01NGxOMjhFZkNHZWRxVklRRmRLWTFVNS9iRnplZ29pbVdpZzU3ZkxYCmk4ZkwxS3Y1c0d4WEZ2Z3FrbHhBYVhjQ2hXVDNYd0thVTdWQlcrYTlZMVZ1aTl1WFVHS0s0eEtFMGFVTDJjc20KYytSUUd4NEZ1SjNTN3BYbVB6S1JBb0lCQVFEbkdYUzYwNm5YUlFEMmZxN01vemRYU0Zhbkw5bTNEV0phVjRwcQo0b3FuVDhaL2s4bnE0VWZQSTJDTGVxYkZYNzY0QVVLdE50MGVnVkdXVnZzVXpmL2FvcGIxKzJ5YnFXNEZ5S1QzClptbFlFaFZnSzNvalNSR1JnclFhcmR0RHZMSkZhQys0bmNKVHA2M0tlSnprcnRsRlZxUDdlKzNNRDV0WUJEK1IKYjhXejQzUHZMTk5FbjlzaElCaVBUMUZzNW5Xc2p3bFc5end6R3NsUFpFbjd3QmVIUm5oZ3l4T1BoWHhkTFB4Vgp3Mm5EeGtRT1h3Wm5QaU41bDVQUTVCRzQ2YVplQ0J4S2hzUDhDT0dlT2x1bWUzem5veE52ZE03WVdPZmt5Ry9PCkNvbWZ5MDRzTUZyQmJ4Q0diSWtzcmk2YzMxZ3A4bEJTeXZOY3ozUHV1Zks3c2xkMUFvSUJBUURFQ0ZEeEJyMFgKT2FQS2FoR20rNGZTN0Y0ZVhnaUduR3Rjb3dxc0VPcG8xaHRwNnI4aVJLVjVZN1RaU21DR1BWaVptZFJUTmFMNwpGUnc4U0tuQm14OU9adTJkeVJpMjRWeTdrZFB2MDJSRzVEcGpuNWswdngvMEJwYlRDcUtjSTVCUHFmOWExblYvCk5aTGFTN1hrcVlqTGhtZmxwaTFRUnVIcm1nTnFoaHQyNE9HWDExamtNOUtDMUxRdFdVbWtkOXlGTEs5dkhoZDgKckRWMWYrUWRrMnRRd3NzMFkyWW9OendYTy9oM0ZkT0k2WlJIUDVIYUtpV3VBbWh3MFNUSXkxS3FmZXJWejFrTwovcVFHRE9ZWnU0OEdERzI5NTQrcm01NmpueWNVK25YZ2l3UzVPVGd2a01scTcrNE9mcnFrQmEyL25idGVpSnhDCjU5eGVuOHgxQUwzMUFvSUJBUURpNmUzaUhEOGlMcEVaZDU1dk5MdjhLZjFidi9KSWVRM2ZveUU0ZmlTaTBBUVoKOUtWSXlkZFdubWdIekhEQVVKalYxL2IrV1dhWXMyWEc5clVtNG5hYzJSVGRodmhIaC8rT0VrdFkyT2dMSUFaNQpIWGVaK2Y4VUg0QjB5YzBJSDluenFLOWkyUlNjUzRLcjBlNUw1UnRWcUJMdnRlbnlla2lRRGV2VkJDamR6ekpnCjRHUzVkelVVdTQwaCtrSDdhZmFWYndVK3JSZ2hIZVlZM0dLQW5VYjgvc2JvVTc1cktDakszSWNRTndZOHd3ckUKQ2E0aDViT3ppcEFMaGtXWWlXTmY1UnJTV3ExSlpmY1RCRDVGbys4ckNzYmtvNDhPZzQxKzZRaFBDYTNFaHozRQp5ZDN6SFBqZTVPZDBSYnRqTVRKQ1RibHM4Zll2WlV0eVZvYnVvZGlaQW9JQkFBM1RRRklmVllxanlBZG9mNkkxCkx4a1REbmc1ellRZzEvbUtqaUFnZVVlM2dldHdZTlo3M09lNHZuSnNxbTROT1locnJ1dkhacDBxbWZrdWJycDIKeERoMVRlREk0L05SNVlaYy9JTjNkeVVBeDVWckZoVUFQYktxSEV6NS9RbmlBRFYrR2NKQVNiMFUvQ3hsRm9qdgo0L1Btb01FemZSS2lUU0NlbGdzWE5peW1JNExmN3liNCtLbTljbytZTW5kazlLcDN3aytsNGFZclJ3SG9hU0FrCjIzYXdwa0FsbW5qUG5HOVBEWERvbXlpV3dKeGR3VjJQaDJURVNyVmFLcXYybXZmbk5YNnF4dThseWsrYTdVZDMKVU5qdVczYi9NOFM0anZHZk1kUnE3WkZPZktETGhramtmekFKaDlLQjRZdmIwcXNtNXFYK0lIY2ZmdzAxVytnTQppMWtDZ2dFQWNOa0xDRk9sTlcxMERtQmxkQzAyMmYveHZNcS9VTFdaNjYwVWxmRkRsNTlBdlZocTVmOEUvYkpxCjhUdWg0YXI1bEx6SCs4TFh4VEp2ZVRRa1RjMmdkY3BNNDJOMlVDQWZuTzVsNk9oeXJXWGlLdHpvSDRyOUFxVEQKbGtpSnVpbkZEUjBaM3dkd2EwK2RnNVV2ZnBPcWZaN2VOVzlLWUN4UWRkc1dMbjFiZTB1dVZjS0VpZTE3RCtOeQp5STd4T2V4U1JWNk5NVC9nYndhRy9xUGowYXVWWjRreHlSN2lNYzBLa1N6Q1ZTb3YwWENWY2NQOWNTYTJ4K2ZTClVYcE5kc1p1cSs0MXU5UlZwRHFwZUc5cXNQbDBTRWY3NzJZUW4zUlE3M3hxY2ZzWDA0WmNwaXluQUNqbkpPZDEKV2NhR0czREl6ZjU4c1BET0dVQndBVWhJaExINExnPT0KLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLQo=</prv>
+  </cert>
+  <syslog/>
+  <gateways>
+    <gateway_group>
+      <name>WAN_FAILOVER</name>
+      <item>WAN_DHCP|1</item>
+      <item>WAN_SPARE_GW|2</item>
+      <trigger>down</trigger>
+      <poolopts/>
+      <descr>WAN Fibre to 5G Failover</descr>
+    </gateway_group>
+  </gateways>
+</opnsense>
