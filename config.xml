@@ -1192,7 +1192,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   <revision>
     <username>root@192.168.50.113</username>
     <description>/api/routing/settings/set_gateway/a64f7721-493a-4c55-bf38-a38a171290a3 made changes</description>
-    <time>1765371458.34</time>
+    <time>1765371469.49</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -3108,7 +3108,7 @@ www.whatsmyip.org</content>
       <Instances/>
       <StaticKeys/>
     </OpenVPN>
-    <Gateways version="1.0.0" persisted_at="1765371458.34" description="Gateways configuration">
+    <Gateways version="1.0.0" persisted_at="1765371469.49" description="Gateways configuration">
       <gateway_item uuid="7378aafd-b3e8-4ac6-b512-e025f034ca08">
         <disabled>0</disabled>
         <name>VPN_DE_GW</name>
@@ -3175,7 +3175,7 @@ www.whatsmyip.org</content>
         <monitor_killstates>0</monitor_killstates>
         <monitor_killstates_priority>0</monitor_killstates_priority>
         <monitor/>
-        <force_down>1</force_down>
+        <force_down>0</force_down>
         <priority>254</priority>
         <weight>1</weight>
         <latencylow/>
