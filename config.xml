@@ -1191,8 +1191,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/routing/settings/set_gateway/a9a12f29-15f1-4e66-a424-ab3b81722a45 made changes</description>
-    <time>1765373366.10</time>
+    <description>/system_gateway_groups_edit.php made changes</description>
+    <time>1765373398.13</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -3565,7 +3565,7 @@ www.whatsmyip.org</content>
     <gateway_group>
       <name>WAN_FAILOVER</name>
       <item>WAN_DHCP|1</item>
-      <item>WAN_SPARE_GW|2</item>
+      <item>WAN_5G_GW|2</item>
       <trigger>down</trigger>
       <poolopts/>
       <descr>WAN Fibre to 5G Failover</descr>
