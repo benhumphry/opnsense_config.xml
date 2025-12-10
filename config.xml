@@ -1192,7 +1192,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   <revision>
     <username>root@192.168.50.113</username>
     <description>/api/core/dashboard/save_widgets made changes</description>
-    <time>1765379719.24</time>
+    <time>1765379807.33</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
