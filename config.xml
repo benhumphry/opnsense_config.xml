@@ -1217,7 +1217,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   <revision>
     <username>root@192.168.50.113</username>
     <description>/api/diagnostics/netflow/setconfig made changes</description>
-    <time>1765461376.57</time>
+    <time>1765461925.29</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -1391,7 +1391,7 @@ redgifs.com</content>
         <onetoone/>
       </Filter>
     </Firewall>
-    <Netflow version="1.0.1" persisted_at="1765461376.57" description="NetFlow configuration">
+    <Netflow version="1.0.1" persisted_at="1765461925.29" description="NetFlow configuration">
       <capture>
         <interfaces>opt2,lan,opt1</interfaces>
         <egress_only/>
@@ -1399,7 +1399,7 @@ redgifs.com</content>
         <targets>127.0.0.1:2056</targets>
       </capture>
       <collect>
-        <enable>1</enable>
+        <enable>0</enable>
       </collect>
       <activeTimeout>1800</activeTimeout>
       <inactiveTimeout>15</inactiveTimeout>
