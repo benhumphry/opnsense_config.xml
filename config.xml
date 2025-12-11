@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/firewall_rules.php made changes</description>
-    <time>1765445293.70</time>
+    <description>/api/firewall/alias/set_item/68c4dc79-f556-4cfc-b194-35a1cf131c4d made changes</description>
+    <time>1765448906.69</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -1232,7 +1232,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
       <Lvtemplate version="0.0.1" persisted_at="1753363447.48">
         <templates/>
       </Lvtemplate>
-      <Alias version="1.0.1" persisted_at="1763800447.65" description="Firewall aliases">
+      <Alias version="1.0.1" persisted_at="1765448906.69" description="Firewall aliases">
         <geoip>
           <url/>
         </geoip>
@@ -1299,7 +1299,9 @@ m.imgur.com
 s.imgur.com
 t.imgur.com
 www.imgur.com
-www.whatsmyip.org</content>
+www.whatsmyip.org
+www.redgifs.com
+redgifs.com</content>
             <password>opnsense</password>
             <username>root</username>
             <authtype/>
