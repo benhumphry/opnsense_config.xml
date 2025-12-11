@@ -1020,39 +1020,6 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
         <description>/firewall_rules_edit.php made changes</description>
       </created>
     </rule>
-    <rule uuid="c884fcac-1cfc-41c6-b426-8ff88fdd0d8c">
-      <type>pass</type>
-      <interface>lan</interface>
-      <ipprotocol>inet</ipprotocol>
-      <statetype>keep state</statetype>
-      <descr>Default allow LAN to any rule</descr>
-      <gateway>WAN_FAILOVER</gateway>
-      <direction>in</direction>
-      <quick>1</quick>
-      <source>
-        <network>lan</network>
-      </source>
-      <destination>
-        <any>1</any>
-      </destination>
-      <updated>
-        <username>root@192.168.50.113</username>
-        <time>1763726241.63</time>
-        <description>/firewall_rules_edit.php made changes</description>
-      </updated>
-    </rule>
-    <rule uuid="495aa1b1-a565-4777-9d3c-dc027d0f9c4f">
-      <type>pass</type>
-      <ipprotocol>inet6</ipprotocol>
-      <descr>Default allow LAN IPv6 to any rule</descr>
-      <interface>lan</interface>
-      <source>
-        <network>lan</network>
-      </source>
-      <destination>
-        <any/>
-      </destination>
-    </rule>
     <rule uuid="828e815e-1abd-40e4-bd82-b28560a65fc7">
       <type>pass</type>
       <interface>lan</interface>
@@ -1207,6 +1174,39 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
         <description>/firewall_rules_edit.php made changes</description>
       </created>
     </rule>
+    <rule uuid="c884fcac-1cfc-41c6-b426-8ff88fdd0d8c">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Default allow LAN to any rule</descr>
+      <gateway>WAN_FAILOVER</gateway>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <network>lan</network>
+      </source>
+      <destination>
+        <any>1</any>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1763726241.63</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+    </rule>
+    <rule uuid="495aa1b1-a565-4777-9d3c-dc027d0f9c4f">
+      <type>pass</type>
+      <ipprotocol>inet6</ipprotocol>
+      <descr>Default allow LAN IPv6 to any rule</descr>
+      <interface>lan</interface>
+      <source>
+        <network>lan</network>
+      </source>
+      <destination>
+        <any/>
+      </destination>
+    </rule>
   </filter>
   <rrd>
     <enable/>
@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/firewall_rules_edit.php made changes</description>
-    <time>1765445198.02</time>
+    <description>/firewall_rules.php made changes</description>
+    <time>1765445293.70</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
