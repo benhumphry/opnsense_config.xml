@@ -1058,6 +1058,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
       <interface>lan</interface>
       <ipprotocol>inet</ipprotocol>
       <statetype>keep state</statetype>
+      <gateway>VPN_DE_GW</gateway>
       <direction>in</direction>
       <quick>1</quick>
       <source>
@@ -1068,7 +1069,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
       </destination>
       <updated>
         <username>root@192.168.50.113</username>
-        <time>1765445150.60</time>
+        <time>1765445197.95</time>
         <description>/firewall_rules_edit.php made changes</description>
       </updated>
       <created>
@@ -1216,7 +1217,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   <revision>
     <username>root@192.168.50.113</username>
     <description>/firewall_rules_edit.php made changes</description>
-    <time>1765445150.66</time>
+    <time>1765445198.02</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
