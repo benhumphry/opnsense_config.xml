@@ -1053,6 +1053,30 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
         <any/>
       </destination>
     </rule>
+    <rule uuid="828e815e-1abd-40e4-bd82-b28560a65fc7">
+      <type>pass</type>
+      <interface>lan</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <direction>in</direction>
+      <quick>1</quick>
+      <source>
+        <address>192.168.50.200/32</address>
+      </source>
+      <destination>
+        <any>1</any>
+      </destination>
+      <updated>
+        <username>root@192.168.50.113</username>
+        <time>1765445150.60</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </updated>
+      <created>
+        <username>root@192.168.50.113</username>
+        <time>1765445150.60</time>
+        <description>/firewall_rules_edit.php made changes</description>
+      </created>
+    </rule>
     <rule uuid="2f19659f-3368-4085-8562-7ff191a34314">
       <type>pass</type>
       <interface>opt2</interface>
@@ -1191,8 +1215,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/routing/settings/set_gateway/a9a12f29-15f1-4e66-a424-ab3b81722a45 made changes</description>
-    <time>1765392924.35</time>
+    <description>/firewall_rules_edit.php made changes</description>
+    <time>1765445150.66</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
