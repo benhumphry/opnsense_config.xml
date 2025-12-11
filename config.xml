@@ -109,8 +109,8 @@
     </ssh>
     <rrdbackup>-1</rrdbackup>
     <netflowbackup>-1</netflowbackup>
-    <firmware version="1.0.1" persisted_at="1765319125.81">
-      <mirror>https://www.mirrorservice.org/sites/opnsense.org</mirror>
+    <firmware version="1.0.1" persisted_at="1765454804.17" description="Firmware settings">
+      <mirror/>
       <flavour/>
       <plugins>os-cpu-microcode-intel,os-ddclient,os-git-backup,os-nextcloud-backup,os-tailscale</plugins>
       <type/>
@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/core/dashboard/save_widgets made changes</description>
-    <time>1765454709.66</time>
+    <description>/api/core/firmware/set made changes</description>
+    <time>1765454804.17</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
