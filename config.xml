@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/add_service/ made changes</description>
-    <time>1765542326.93</time>
+    <description>/api/monit/settings/set_service/85cf1dbe-fc03-400c-a475-e94cf42848e1 made changes</description>
+    <time>1765542352.53</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765542326.93" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765542352.53" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3069,8 +3069,8 @@ redgifs.com</content>
       </service>
       <service uuid="85cf1dbe-fc03-400c-a475-e94cf42848e1">
         <enabled>1</enabled>
-        <name>KeaDHCP</name>
-        <description>Restart Unbound process on failure</description>
+        <name>Kea_DHCP</name>
+        <description>Restart Kea DHCP process on failure</description>
         <type>process</type>
         <pidfile>/var/run/kea/kea-dhcp4.kea-dhcp4.pid</pidfile>
         <match/>
