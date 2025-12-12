@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/add_test/ made changes</description>
-    <time>1765541860.56</time>
+    <description>/api/monit/settings/toggle_service/2e41bc73-c7bc-4848-a8fc-26d3d307c08c made changes</description>
+    <time>1765541905.70</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765541860.56" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765541905.70" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3032,7 +3032,7 @@ redgifs.com</content>
         <polltime/>
       </service>
       <service uuid="2e41bc73-c7bc-4848-a8fc-26d3d307c08c">
-        <enabled>0</enabled>
+        <enabled>1</enabled>
         <name>gateway_alert</name>
         <description/>
         <type>custom</type>
