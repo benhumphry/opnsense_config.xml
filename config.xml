@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/set/ made changes</description>
-    <time>1765542394.46</time>
+    <description>/api/monit/settings/set_alert/a508f140-5254-46e8-9708-7ca568f7f69f made changes</description>
+    <time>1765542727.89</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765542394.46" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765542727.89" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -2969,13 +2969,15 @@ redgifs.com</content>
         <mmonitRegisterCredentials>1</mmonitRegisterCredentials>
       </general>
       <alert uuid="a508f140-5254-46e8-9708-7ca568f7f69f">
-        <enabled>0</enabled>
-        <recipient>root@localhost.local</recipient>
+        <enabled>1</enabled>
+        <recipient>ben@benhumphry.com</recipient>
         <noton>0</noton>
         <events/>
-        <format/>
+        <format>From: router@seed.lol
+Subject: Monit Alert: $SERVICE on $HOST
+</format>
         <reminder/>
-        <description/>
+        <description>Primary Alert Recipient</description>
       </alert>
       <service uuid="84e26a04-85a0-42d6-9855-1094cf70c66e">
         <enabled>1</enabled>
