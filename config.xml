@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/set_test/8967a5e3-74c7-4729-9350-3e35dc4dbb7a made changes</description>
-    <time>1765541646.68</time>
+    <description>/api/monit/settings/add_test/ made changes</description>
+    <time>1765541860.56</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765541646.68" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765541860.56" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3124,6 +3124,13 @@ redgifs.com</content>
         <type>ProgramStatus</type>
         <condition>status != 0</condition>
         <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="badef686-2d17-4462-8587-00ab16a2f862">
+        <name>NonZeroStatus_Restart</name>
+        <type>ProgramStatus</type>
+        <condition>status != 0</condition>
+        <action>restart</action>
         <path/>
       </test>
     </monit>
