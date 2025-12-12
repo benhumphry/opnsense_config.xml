@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/add_service/ made changes</description>
-    <time>1765545570.28</time>
+    <description>/api/tailscale/settings/set made changes</description>
+    <time>1765545851.85</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -3481,7 +3481,7 @@ Subject: Monit Alert: $SERVICE on $HOST
       </accounts>
     </DynDNS>
     <tailscale>
-      <settings version="1.0.0" persisted_at="1765319980.15" description="Tailscale general settings">
+      <settings version="1.0.0" persisted_at="1765545851.85" description="Tailscale general settings">
         <enabled>1</enabled>
         <loginTimeout>10</loginTimeout>
         <listenPort>41641</listenPort>
