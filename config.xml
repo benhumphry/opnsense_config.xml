@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/set_alert/a508f140-5254-46e8-9708-7ca568f7f69f made changes</description>
-    <time>1765542727.89</time>
+    <description>/api/monit/settings/set/ made changes</description>
+    <time>1765542732.43</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765542727.89" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765542732.43" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -2952,7 +2952,7 @@ redgifs.com</content>
         <port>465</port>
         <username>resend</username>
         <password>re_7LNaaS2P_EyA9Dr5BgKVGKAQyk17NMsRM</password>
-        <ssl>0</ssl>
+        <ssl>1</ssl>
         <sslversion>auto</sslversion>
         <sslverify>1</sslverify>
         <logfile/>
