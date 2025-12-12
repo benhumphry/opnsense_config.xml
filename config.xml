@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/set/ made changes</description>
-    <time>1765541908.54</time>
+    <description>/api/monit/settings/add_service/ made changes</description>
+    <time>1765542280.59</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765541908.54" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765542280.59" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3046,6 +3046,24 @@ redgifs.com</content>
         <start/>
         <stop/>
         <tests>d5f2010e-0bf6-4ad2-9f2e-6906828d508d</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="5fc35548-a65c-4a84-975a-e590687f3537">
+        <enabled>1</enabled>
+        <name>Unbound</name>
+        <description>Restart Unbound process on failure</description>
+        <type>process</type>
+        <pidfile>/var/run/unbound.pid</pidfile>
+        <match/>
+        <path/>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start>/usr/local/sbin/configctl unbound start</start>
+        <stop>/usr/local/sbin/configctl unbound stop</stop>
+        <tests/>
         <depends/>
         <polltime/>
       </service>
