@@ -1217,7 +1217,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   <revision>
     <username>root@192.168.50.113</username>
     <description>/api/monit/settings/add_service/ made changes</description>
-    <time>1765545103.02</time>
+    <time>1765545570.28</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765545103.02" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765545570.28" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3120,6 +3120,24 @@ Subject: Monit Alert: $SERVICE on $HOST
         <start>/usr/local/sbin/configctl tailscaled start</start>
         <stop>/usr/local/sbin/configctl tailscaled stop</stop>
         <tests/>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="b6398ffd-e90b-4189-955e-3a6af285c790">
+        <enabled>1</enabled>
+        <name>WireGuard_VPN_DE</name>
+        <description>Restart WireGuard once if VPN_DE tunnel down</description>
+        <type>custom</type>
+        <pidfile/>
+        <match/>
+        <path>/usr/local/bin/wg_health.sh</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>d5f2010e-0bf6-4ad2-9f2e-6906828d508d</tests>
         <depends/>
         <polltime/>
       </service>
