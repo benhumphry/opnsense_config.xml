@@ -1216,8 +1216,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/monit/settings/set/ made changes</description>
-    <time>1765542732.43</time>
+    <description>/api/monit/settings/add_service/ made changes</description>
+    <time>1765545037.93</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
@@ -2943,7 +2943,7 @@ redgifs.com</content>
         <ha_peers/>
       </dhcp6>
     </Kea>
-    <monit version="1.0.14" persisted_at="1765542732.43" description="Monit settings">
+    <monit version="1.0.14" persisted_at="1765545037.93" description="Monit settings">
       <general>
         <enabled>1</enabled>
         <interval>120</interval>
@@ -3083,6 +3083,24 @@ Subject: Monit Alert: $SERVICE on $HOST
         <interface/>
         <start>/usr/local/sbin/configctl kea start</start>
         <stop>/usr/local/sbin/configctl kea stop</stop>
+        <tests/>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="4f62e282-05da-4956-a9da-656e3c20f3bf">
+        <enabled>1</enabled>
+        <name>ddclient</name>
+        <description>Restart dynamic DDNS updater on failure</description>
+        <type>process</type>
+        <pidfile>/var/run/ddclient.pid</pidfile>
+        <match/>
+        <path/>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start>/usr/local/sbin/configctl ddclient start</start>
+        <stop>/usr/local/sbin/configctl ddclient stop</stop>
         <tests/>
         <depends/>
         <polltime/>
