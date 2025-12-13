@@ -1217,8 +1217,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>Firewall: NAT: Outbound, toggle NAT rule</description>
-    <time>1765653975.67</time>
+    <description>/firewall_nat_out.php made changes</description>
+    <time>1765654062.18</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
