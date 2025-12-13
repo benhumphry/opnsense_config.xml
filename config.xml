@@ -773,6 +773,7 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
           <time>1752524969.0608</time>
           <description>/firewall_nat_out_edit.php made changes</description>
         </created>
+        <disabled>1</disabled>
       </rule>
     </outbound>
     <rule>
@@ -1216,8 +1217,8 @@ vpggTmtEDnPqtfXFK2sJAAAAD2dpdGh1YkBzZWVkLmxvbAECAwQFBg==&#13;
   </ntpd>
   <revision>
     <username>root@192.168.50.113</username>
-    <description>/api/core/dashboard/save_widgets made changes</description>
-    <time>1765573501.16</time>
+    <description>Firewall: NAT: Outbound, toggle NAT rule</description>
+    <time>1765653975.67</time>
   </revision>
   <OPNsense>
     <captiveportal version="1.0.4" persisted_at="1753363447.35">
